@@ -1,4 +1,4 @@
-# Python Bytecode
+﻿# Python Bytecode
 __pycache__/
 *.pyc
 *.pyo
@@ -31,4 +31,4 @@ coverage.xml
 
 temp_images/
 uvicorn
-__pycache__/
+app/data/images/test/
