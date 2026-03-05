@@ -27,3 +27,5 @@ coverage.xml
 # Temporary files
 *.bak
 *.swp
+
+app/data/images/test/
