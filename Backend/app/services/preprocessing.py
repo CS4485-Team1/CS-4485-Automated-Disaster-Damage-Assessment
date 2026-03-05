@@ -60,7 +60,7 @@ if __name__ == "__main__":
         print(f"Found {len(results)} valid pairs.\n")
         
         for sample in results:
-            print(f"ID: {sample['id']} (City: {sample['city']})")
+            print(f"ID: {sample['id']} (City: {sample['city']}) Preimg path: {sample['pre']} Postimg path: {sample['post']}")
             
             print(f"\n[LABELS] Buildings found: {len(sample['labels'])}")
             for i, lbl in enumerate(sample['labels'], 1):
