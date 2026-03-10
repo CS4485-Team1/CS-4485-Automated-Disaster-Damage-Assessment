@@ -6,15 +6,23 @@ from PIL import Image
 def get_label_xy(imagePath: str):
     imgPath = Path(imagePath)
     labelPath = imgPath.parent.parent / "labels" / imgPath.name.replace(".png", ".json")
+    
+
     with open(labelPath, 'r') as p:
         data = json.load(p)
         features = data.get("features", {}).get("xy", [])
-        rawCoords = []
+        
+        extracted_data = []
         for obj in features:
             wkt = obj.get("wkt", ",")
-            clean = wkt.replace("POLYGON ((", "").replace("))", "")
-            rawCoords.append(clean)
-        return rawCoords
+            coords = wkt.replace("POLYGON ((", "").replace("))", "")
+            subtype = obj.get("properties", {}).get("subtype", "unknown")
+            
+            extracted_data.append({
+                "coords": coords,
+                "subtype": subtype
+            })
+        return extracted_data
     
 def create_bounding_box(coords: str):
     padding = 15
@@ -33,55 +41,61 @@ def create_bounding_box(coords: str):
     max_y = max(ys) + padding
     return (int(min_x), int(min_y), int(max_x), int(max_y))
 
-
 def get_pairs(image_directory: str, output_crop_directory: str):
     valid_building_pairs = []
     groupIds = {}
     path = Path(image_directory)
     crop = Path(output_crop_directory)
     crop.mkdir(parents=True, exist_ok=True)
+
     for imgPath in path.glob("*.png"):
         name = imgPath.name
         if "wildfire" not in name:
             continue
+        
         parts = name.split("_")
         cityAndDisaster = parts[0]
         num = parts[1]
         time = parts[2]
         city = cityAndDisaster.replace("-wildfire", "")
         pair = f"{city}-{num}"
+
         if pair not in groupIds:
             groupIds[pair] = {'city': city}
+
         if "pre" in time:
             groupIds[pair]['pre'] = str(imgPath)
-            groupIds[pair]['labels'] = get_label_xy(imgPath)
         elif "post" in time:
             groupIds[pair]["post"] = str(imgPath)
-            if 'labels' not in groupIds[pair] or not groupIds[pair]['labels']:
-                groupIds[pair]['labels'] = get_label_xy(imgPath)
+            groupIds[pair]['labels_data'] = get_label_xy(imgPath)
+
     for pair_id, data in groupIds.items():
-        if "pre" not in data or "post" not in data or "labels" not in data:
+        if "pre" not in data or "post" not in data or "labels_data" not in data:
             continue
+
         with Image.open(data['pre']) as pre, Image.open(data["post"]) as post:
-            for idx, points in enumerate(data["labels"]):
+            for idx, item in enumerate(data["labels_data"]):
+                points = item["coords"]
+                subtype = item["subtype"]
+                
                 bounding = create_bounding_box(points)
                 pre_crop = pre.crop(bounding)
                 post_crop = post.crop(bounding)
+                
                 pre_crop_path = crop / f"{pair_id}_bldg{idx}_pre.png"
                 post_crop_path = crop / f"{pair_id}_bldg{idx}_post.png"
+                
                 pre_crop.save(pre_crop_path)
                 post_crop.save(post_crop_path)
+                
                 valid_building_pairs.append({
                     "building_id": f"{pair_id}_bldg{idx}",
-                        "city": data["city"],
-                        "pre_crop": str(pre_crop_path),
-                        "post_crop": str(post_crop_path),
+                    "city": data["city"],
+                    "subtype": subtype,
+                    "pre_crop": str(pre_crop_path),
+                    "post_crop": str(post_crop_path),
                 })
     return valid_building_pairs
-
-    
-
-
 
 if __name__ == "__main__":
     script_dir = Path(__file__).parent 
@@ -93,10 +107,9 @@ if __name__ == "__main__":
         print(f"Found and extracted {len(results)} individual building pairs.\n")
         
         for sample in results:
-            print(f"Building ID: {sample['building_id']} (City: {sample['city']})")
-            print(f"  Pre-disaster crop:  {sample['pre_crop']}")
-            print(f"  Post-disaster crop: {sample['post_crop']}")
-            
+            print(f"Building ID: {sample['building_id']} | Subtype: {sample['subtype']}")
+            print(f"  Pre: {sample['pre_crop']}")
+            print(f"  Post: {sample['post_crop']}")
             
     except Exception as e:
         print(f"Error: {e}")
