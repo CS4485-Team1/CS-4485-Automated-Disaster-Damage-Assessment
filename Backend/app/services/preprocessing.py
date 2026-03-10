@@ -1,6 +1,7 @@
 import json
 import os
 from pathlib import Path
+from PIL import Image
 
 def get_label_xy(imagePath: str):
     imgPath = Path(imagePath)
@@ -14,10 +15,31 @@ def get_label_xy(imagePath: str):
             clean = wkt.replace("POLYGON ((", "").replace("))", "")
             rawCoords.append(clean)
         return rawCoords
+    
+def create_bounding_box(coords: str):
+    padding = 15
+    points = coords.split(",")
+    xs, ys = [], []
+    for p in points:
+        parts = p.strip().split(" ")
+        if(len(parts) == 2):
+            xs.append(float(parts[0]))
+            ys.append(float(parts[1]))
+    if not xs or not ys:
+        return None
+    min_x= min(xs) - padding
+    min_y = min(ys) - padding
+    max_x = max(xs) + padding
+    max_y = max(ys) + padding
+    return (int(min_x), int(min_y), int(max_x), int(max_y))
 
-def get_pairs(image_directory: str):
+
+def get_pairs(image_directory: str, output_crop_directory: str):
+    valid_building_pairs = []
     groupIds = {}
     path = Path(image_directory)
+    crop = Path(output_crop_directory)
+    crop.mkdir(parents=True, exist_ok=True)
     for imgPath in path.glob("*.png"):
         name = imgPath.name
         if "wildfire" not in name:
@@ -37,37 +59,44 @@ def get_pairs(image_directory: str):
             groupIds[pair]["post"] = str(imgPath)
             if 'labels' not in groupIds[pair] or not groupIds[pair]['labels']:
                 groupIds[pair]['labels'] = get_label_xy(imgPath)
+    for pair_id, data in groupIds.items():
+        if "pre" not in data or "post" not in data or "labels" not in data:
+            continue
+        with Image.open(data['pre']) as pre, Image.open(data["post"]) as post:
+            for idx, points in enumerate(data["labels"]):
+                bounding = create_bounding_box(points)
+                pre_crop = pre.crop(bounding)
+                post_crop = post.crop(bounding)
+                pre_crop_path = crop / f"{pair_id}_bldg{idx}_pre.png"
+                post_crop_path = crop / f"{pair_id}_bldg{idx}_post.png"
+                pre_crop.save(pre_crop_path)
+                post_crop.save(post_crop_path)
+                valid_building_pairs.append({
+                    "building_id": f"{pair_id}_bldg{idx}",
+                        "city": data["city"],
+                        "pre_crop": str(pre_crop_path),
+                        "post_crop": str(post_crop_path),
+                })
+    return valid_building_pairs
+
     
-    validPairs = []
-    for pairs, data in groupIds.items():
-        if "pre" in data and "post" in data:
-            validPairs.append({
-                "id": pairs,
-                "city": data["city"],
-                "pre": data["pre"],
-                "post": data["post"],
-                "labels": data.get("labels", [])
-            })
-    return validPairs
+
 
 
 if __name__ == "__main__":
     script_dir = Path(__file__).parent 
     test_image_dir = script_dir.parent / "data" / "images" / "test" / "images"
+    output_crop_dir = script_dir.parent / "data" / "images" / "test" / "building_crops"
     
     try:
-        results = get_pairs(str(test_image_dir))
-        print(f"Found {len(results)} valid pairs.\n")
+        results = get_pairs(str(test_image_dir), str(output_crop_dir))
+        print(f"Found and extracted {len(results)} individual building pairs.\n")
         
         for sample in results:
-            print(f"ID: {sample['id']} (City: {sample['city']}) Preimg path: {sample['pre']} Postimg path: {sample['post']}")
+            print(f"Building ID: {sample['building_id']} (City: {sample['city']})")
+            print(f"  Pre-disaster crop:  {sample['pre_crop']}")
+            print(f"  Post-disaster crop: {sample['post_crop']}")
             
-            print(f"\n[LABELS] Buildings found: {len(sample['labels'])}")
-            for i, lbl in enumerate(sample['labels'], 1):
-                print(f"  Label {i}: {lbl}")
-            
-            print("\n" + "-"*50 + "\n")
-            break
             
     except Exception as e:
         print(f"Error: {e}")
