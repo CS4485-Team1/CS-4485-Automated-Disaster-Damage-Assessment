@@ -316,49 +316,64 @@ function App() {
         </section>
       </main>
 
-      <section className="chat-bar">
-        <div className="chat-avatar" aria-hidden="true">
-          <div className="chat-avatar-head" />
-          <div className="chat-avatar-body" />
+      
+<section className="chat-container">
+  <div className="chat-messages">
+    {chatMessages.map((message) => (
+      <div
+        key={message.id}
+        className={`message-wrapper ${message.sender === "user" ? "user-wrapper" : "assistant-wrapper"}`}
+      >
+        {/* Only show the AI icon for assistant messages */}
+        {message.sender === "assistant" && (
+          <div className="assistant-icon" title="AI Assistant">AI</div>
+        )}
+        
+        <div className={`chat-bubble ${message.sender}`}>
+          {message.text}
         </div>
-        <div className="chat-content">
-          <div className="chat-messages">
-            {chatMessages.map((message) => (
-              <div
-                key={message.id}
-                className={`chat-message ${message.sender}`}
-              >
-                <span className="chat-message-label">
-                  {message.sender === "user" ? "You" : "Assistant"}
-                </span>
-                <span className="chat-message-text">{message.text}</span>
-              </div>
-            ))}
-          </div>
-          <div className="chat-input-row">
-            <input
-              className="chat-input"
-              type="text"
-              value={chatInput}
-              onChange={(event) => setChatInput(event.target.value)}
-              placeholder="What is the current situation?"
-              onKeyDown={(event) => {
-                if (event.key === "Enter") {
-                  event.preventDefault();
-                  handleSendChat();
-                }
-              }}
-            />
-            <button
-              className="chat-send-button"
-              type="button"
-              onClick={handleSendChat}
-            >
-              Send
-            </button>
-          </div>
-        </div>
-      </section>
+      </div>
+    ))}
+  </div>
+
+  <div className="chat-input-area">
+    {/* Refined Quick Actions to help with Capstone testing */}
+    <div className="quick-actions">
+      <button type="button" onClick={() => setChatInput("Analyze severe damage areas")}>
+        Analyze Severe Damage
+      </button>
+      <button type="button" onClick={() => setChatInput("Show overall building damage")}>
+        Show Overall Building Damage
+      </button>
+      <button type="button" onClick={() => setChatInput("Number of buildings affected")}>
+        Show Number of Buildings Affected
+      </button>
+    </div>
+
+    <div className="chat-input-row">
+      <input
+        className="chat-input"
+        type="text"
+        value={chatInput}
+        onChange={(event) => setChatInput(event.target.value)}
+        placeholder="Ask about damage patterns..."
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            event.preventDefault();
+            handleSendChat();
+          }
+        }}
+      />
+      <button
+        className="chat-send-button"
+        type="button"
+        onClick={handleSendChat}
+      >
+        Send
+      </button>
+    </div>
+  </div>
+</section>
     </div>
   );
 }
