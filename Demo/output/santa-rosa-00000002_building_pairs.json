@@ -1,0 +1,800 @@
+[
+  {
+    "id": "santa-rosa-00000002_bldg0",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg0_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg0_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg1",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg1_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg1_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg2",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg2_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg2_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg3",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg3_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg3_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg4",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg4_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg4_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg5",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg5_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg5_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg6",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg6_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg6_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg7",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg7_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg7_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg8",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg8_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg8_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg9",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg9_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg9_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg10",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg10_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg10_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg11",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg11_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg11_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg12",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg12_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg12_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg13",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg13_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg13_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg14",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg14_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg14_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg15",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg15_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg15_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg16",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg16_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg16_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg17",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg17_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg17_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg18",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg18_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg18_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg19",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg19_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg19_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg20",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg20_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg20_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg21",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg21_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg21_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg22",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg22_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg22_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg23",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg23_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg23_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg24",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg24_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg24_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg25",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg25_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg25_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg26",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg26_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg26_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg27",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg27_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg27_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg28",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg28_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg28_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg29",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg29_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg29_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg30",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg30_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg30_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg31",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg31_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg31_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg32",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg32_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg32_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg33",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg33_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg33_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg34",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg34_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg34_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg35",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg35_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg35_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg36",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg36_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg36_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg37",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg37_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg37_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg38",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg38_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg38_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg39",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg39_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg39_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg40",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg40_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg40_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg41",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg41_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg41_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg42",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg42_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg42_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg43",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg43_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg43_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg44",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg44_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg44_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg45",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg45_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg45_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg46",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg46_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg46_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg47",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg47_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg47_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg48",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg48_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg48_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg49",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg49_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg49_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg50",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg50_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg50_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg51",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg51_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg51_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg52",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg52_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg52_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg53",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg53_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg53_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg54",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg54_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg54_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg55",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg55_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg55_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg56",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg56_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg56_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg57",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg57_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg57_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg58",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg58_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg58_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg59",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg59_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg59_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg60",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg60_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg60_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg61",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg61_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg61_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg62",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg62_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg62_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg63",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg63_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg63_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg64",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg64_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg64_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg65",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg65_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg65_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg66",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg66_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg66_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg67",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg67_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg67_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg68",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg68_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg68_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg69",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg69_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg69_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg70",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg70_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg70_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg71",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg71_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg71_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg72",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg72_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg72_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg73",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg73_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg73_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg74",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg74_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg74_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg75",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg75_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg75_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg76",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg76_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg76_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg77",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg77_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg77_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg78",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg78_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg78_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg79",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg79_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg79_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg80",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg80_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg80_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg81",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg81_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg81_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg82",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg82_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg82_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg83",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg83_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg83_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg84",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg84_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg84_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg85",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg85_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg85_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg86",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg86_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg86_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg87",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg87_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg87_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg88",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg88_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg88_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg89",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg89_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg89_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg90",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg90_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg90_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg91",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg91_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg91_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg92",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg92_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg92_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg93",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg93_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg93_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg94",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg94_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg94_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg95",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg95_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg95_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg96",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg96_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg96_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg97",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg97_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg97_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg98",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg98_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg98_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg99",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg99_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg99_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg100",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg100_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg100_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg101",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg101_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg101_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg102",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg102_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg102_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg103",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg103_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg103_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg104",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg104_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg104_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg105",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg105_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg105_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg106",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg106_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg106_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg107",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg107_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg107_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg108",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg108_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg108_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg109",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg109_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg109_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg110",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg110_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg110_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg111",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg111_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg111_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg112",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg112_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg112_post.png",
+    "ground_truth": "no-damage"
+  },
+  {
+    "id": "santa-rosa-00000002_bldg113",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg113_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg113_post.png",
+    "ground_truth": "no-damage"
+  }
+]
