@@ -1,5 +1,6 @@
 # React + TypeScript + Vite
-
+You need to install pillow to use the backend
+pip install Pillow
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
