@@ -66,6 +66,11 @@ function App() {
     minorDamage: true,
     severeDamage: true,
   });
+  const [mapZoom, setMapZoom] = useState(1);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+  const [activeImageTab, setActiveImageTab] = useState<"before" | "after">("after");
   const [selectedPropertyId, setSelectedPropertyId] = useState<string>(
     PROPERTIES[2].id,
   );
@@ -191,37 +196,63 @@ function App() {
       <main className="app-main">
         <section className="left-column">
           <section className="panel imagery-panel">
-            <div className="panel-header">
-              <h2>Pre/Post Disaster Imagery</h2>
+            <div className="imagery-tabs">
+              <button
+                type="button"
+                className={`imagery-tab${activeImageTab === "before" ? " active" : ""}`}
+                onClick={() => setActiveImageTab("before")}
+              >
+                Before
+              </button>
+              <button
+                type="button"
+                className={`imagery-tab${activeImageTab === "after" ? " active" : ""}`}
+                onClick={() => setActiveImageTab("after")}
+              >
+                After
+              </button>
             </div>
-            <div className="imagery-grid">
-              <div className="imagery-card">
-                <div className="imagery-placeholder before" />
-                <div className="imagery-label">Before – simulated view</div>
-              </div>
-              <div className="imagery-card">
-                <div className="imagery-placeholder after" />
-                <div className="imagery-label">After – simulated view</div>
+            <div className="imagery-content">
+              {activeImageTab === "before" ? (
+                <img
+                  src="/santa-rosa-wildfire_00000000_pre_disaster.png"
+                  alt="Before"
+                  className="imagery-img"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+              ) : (
+                <img
+                  src="/santa-rosa-wildfire_00000000_post_disaster.png"
+                  alt="After disaster"
+                  className="imagery-img"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).style.display = "none";
+                  }}
+                />
+              )}
+              <div className="imagery-label">
+                {activeImageTab === "before" ? "Before – pre-disaster" : "After – post-disaster"}
               </div>
             </div>
             <div className="imagery-details">
-              <div className="imagery-pill">
-                {selectedDisaster ?? "No disaster selected"}
-              </div>
-              <div className="imagery-meta">
-                <div className="imagery-meta-title">Selected property</div>
-                <div className="imagery-meta-damage">
-                  Predicted damage:{" "}
-                  <span className={`damage-tag ${selectedProperty.damageLevel}`}>
-                    {selectedProperty.damageLevel === "noDamage" && "No Damage"}
-                    {selectedProperty.damageLevel === "minorDamage" &&
-                      "Minor Damage"}
-                    {selectedProperty.damageLevel === "severeDamage" &&
-                      "Severe Damage"}
-                  </span>
-                </div>
-              </div>
-            </div>
+            <div className="imagery-pill">
+          {selectedDisaster ?? "No disaster selected"}
+        </div>
+        <div className="imagery-meta">
+          <div className="imagery-meta-title">Selected property</div>
+          <div className="imagery-meta-damage">
+            Predicted damage:{" "}
+            <span className={`damage-tag ${selectedProperty.damageLevel}`}>
+              {selectedProperty.damageLevel === "noDamage" && "No Damage"}
+              {selectedProperty.damageLevel === "minorDamage" && "Minor Damage"}
+              {selectedProperty.damageLevel === "severeDamage" && "Severe Damage"}
+            </span>
+          </div>
+        </div>
+      </div>
+      
           </section>
 
           <section className="panel legend-panel">
@@ -267,19 +298,54 @@ function App() {
             </div>
             <div className="map-container">
               <div className="map-toolbar">
-                <button className="map-button" type="button">
+                <button className="map-button" type="button" onClick={() => setMapZoom(z => Math.min(z + 0.2, 3))}>
                   +
                 </button>
-                <button className="map-button" type="button">
+                <button className="map-button" type="button" onClick={() => setMapZoom(z => Math.max(z - 0.2, 0.5))}>
                   −
                 </button>
               </div>
-              <div className="map-placeholder">
-                <div className="map-houses-row">
-                  {row0.map((property) => renderHouse(property))}
-                </div>
-                <div className="map-houses-row">
-                  {row1.map((property) => renderHouse(property))}
+              <div
+                className="map-placeholder"
+                style={{ overflow: "hidden", position: "relative", cursor: isDragging ? "grabbing" : "grab" }}
+                onMouseDown={(e) => {
+                  setIsDragging(true);
+                  setDragStart({ x: e.clientX - pan.x, y: e.clientY - pan.y });
+                }}
+                onMouseMove={(e) => {
+                  if (!isDragging) return;
+                  setPan({ x: e.clientX - dragStart.x, y: e.clientY - dragStart.y });
+                }}
+                onMouseUp={() => setIsDragging(false)}
+                onMouseLeave={() => setIsDragging(false)}
+              >
+                <img
+                  src={activeImageTab === "before"
+                    ? "/santa-rosa-wildfire_00000000_pre_disaster.png"
+                    : "/santa-rosa-wildfire_00000000_post_disaster.png"}
+                  alt="Satellite view"
+                  draggable={false}
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "contain",
+                    transform: `scale(${mapZoom}) translate(${pan.x / mapZoom}px, ${pan.y / mapZoom}px)`,
+                    transformOrigin: "center center",
+                    transition: isDragging ? "none" : "transform 0.2s ease",
+                    display: "block",
+                    userSelect: "none",
+                  }}
+                />
+                <div style={{ position: "relative", zIndex: 1 }}>
+                  <div className="map-houses-row">
+                    {row0.map((property) => renderHouse(property))}
+                  </div>
+                  <div className="map-houses-row">
+                    {row1.map((property) => renderHouse(property))}
+                  </div>
                 </div>
               </div>
               <div className="map-legend-floating">
@@ -297,20 +363,20 @@ function App() {
                   <span>Severe Damage</span>
                 </div>
               </div>
-            </div>
-            <div className="map-legend-bottom">
-              <span className="legend-item">
-                <span className="legend-dot no-damage" />
-                No Damage
-              </span>
-              <span className="legend-item">
-                <span className="legend-dot minor-damage" />
-                Minor Damage
-              </span>
-              <span className="legend-item">
-                <span className="legend-dot severe-damage" />
-                Severe Damage
-              </span>
+              <div className="map-legend-bottom">
+                <span className="legend-item">
+                  <span className="legend-dot no-damage" />
+                  No Damage
+                </span>
+                <span className="legend-item">
+                  <span className="legend-dot minor-damage" />
+                  Minor Damage
+                </span>
+                <span className="legend-item">
+                  <span className="legend-dot severe-damage" />
+                  Severe Damage
+                </span>
+              </div>
             </div>
           </section>
         </section>
