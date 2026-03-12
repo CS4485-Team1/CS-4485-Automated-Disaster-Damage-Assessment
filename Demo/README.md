@@ -1,41 +1,35 @@
-Demo flow for house-crop preprocessing.
+Demo folder for the house crop test.
 
 Files:
-- `preprocessing.py`: creates one pre/post crop pair per labeled building
-- `adapter.py`: normalizes preprocessing output into one simple schema
-- `service.py`: sends crop pairs to the VLM
-- `runner.py`: runs preprocessing and can run VLM on a limited number of crop pairs
+- `preprocessing.py` makes the building crops
+- `adapter.py` cleans the output format
+- `service.py` sends crop pairs to the VLM
+- `runner.py` runs the steps
 
-Expected output record:
+Output format:
 
 ```json
 {
   "id": "santa-rosa-00000375_bldg51",
   "city": "santa-rosa",
   "pre_image_path": "path/to/pre_crop.png",
-  "post_image_path": "path/to/post_crop.png"
+  "post_image_path": "path/to/post_crop.png",
+  "ground_truth": "no-damage"
 }
 ```
 
-Run from repo root:
+Run all preprocessing:
 
 ```powershell
 cd Demo
 python runner.py
 ```
 
-Run preprocessing for one scene:
+Run one scene only:
 
 ```powershell
 cd Demo
 python runner.py scene santa-rosa-00000002
-```
-
-Run VLM on the first 10 crop pairs:
-
-```powershell
-cd Demo
-python runner.py vlm 10
 ```
 
 Run VLM on one scene:
