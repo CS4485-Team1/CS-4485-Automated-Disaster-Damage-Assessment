@@ -1,0 +1,333 @@
+[
+    {
+        "query": "What happened at 123 Pine Street?",
+        "expected_intent": "GET_BUILDING_DAMAGE",
+        "expected_fields": {
+            "addresses": [
+                "123 Pine Street"
+            ]
+        }
+    },
+    {
+        "query": "Damage report for 42 Oak Ave",
+        "expected_intent": "GET_BUILDING_DAMAGE",
+        "expected_fields": {
+            "addresses": [
+                "42 Oak Ave"
+            ]
+        }
+    },
+    {
+        "query": "Was 78 Maple Road destroyed?",
+        "expected_intent": "GET_BUILDING_DAMAGE",
+        "expected_fields": {
+            "addresses": [
+                "78 Maple Road"
+            ]
+        }
+    },
+    {
+        "query": "Status of 15 Cedar Blvd",
+        "expected_intent": "GET_BUILDING_DAMAGE",
+        "expected_fields": {
+            "addresses": [
+                "15 Cedar Blvd"
+            ]
+        }
+    },
+    {
+        "query": "Check 9 Birch Street",
+        "expected_intent": "GET_BUILDING_DAMAGE",
+        "expected_fields": {
+            "addresses": [
+                "9 Birch Street"
+            ]
+        }
+    },
+    {
+        "query": "How many homes were destroyed on Maple Street?",
+        "expected_intent": "GET_STREET_SUMMARY",
+        "expected_fields": {
+            "streets": [
+                "Maple Street"
+            ],
+            "damage_level": "destroyed"
+        }
+    },
+    {
+        "query": "Summarize damage on Oak Avenue",
+        "expected_intent": "GET_STREET_SUMMARY",
+        "expected_fields": {
+            "streets": [
+                "Oak Avenue"
+            ]
+        }
+    },
+    {
+        "query": "Major damage along Pine Street?",
+        "expected_intent": "GET_STREET_SUMMARY",
+        "expected_fields": {
+            "streets": [
+                "Pine Street"
+            ],
+            "damage_level": "major"
+        }
+    },
+    {
+        "query": "Any minor damage on Cedar Road?",
+        "expected_intent": "GET_STREET_SUMMARY",
+        "expected_fields": {
+            "streets": [
+                "Cedar Road"
+            ],
+            "damage_level": "minor"
+        }
+    },
+    {
+        "query": "Was Elm Street hit hard?",
+        "expected_intent": "GET_STREET_SUMMARY",
+        "expected_fields": {
+            "streets": [
+                "Elm Street"
+            ]
+        }
+    },
+    {
+        "query": "Give me a breakdown for Birch Street",
+        "expected_intent": "GET_STREET_SUMMARY",
+        "expected_fields": {
+            "streets": [
+                "Birch Street"
+            ]
+        }
+    },
+    {
+        "query": "Give me a damage report for Zone A",
+        "expected_intent": "GET_AREA_SUMMARY",
+        "expected_fields": {
+            "areas": [
+                "Zone A"
+            ]
+        }
+    },
+    {
+        "query": "How bad was Neighborhood R?",
+        "expected_intent": "GET_AREA_SUMMARY",
+        "expected_fields": {
+            "areas": [
+                "Neighborhood R"
+            ]
+        }
+    },
+    {
+        "query": "Damage overview for Downtown district",
+        "expected_intent": "GET_AREA_SUMMARY",
+        "expected_fields": {
+            "areas": [
+                "Downtown district"
+            ]
+        }
+    },
+    {
+        "query": "Was Zone B severely impacted?",
+        "expected_intent": "GET_AREA_SUMMARY",
+        "expected_fields": {
+            "areas": [
+                "Zone B"
+            ]
+        }
+    },
+    {
+        "query": "Summary for Uptown",
+        "expected_intent": "GET_AREA_SUMMARY",
+        "expected_fields": {
+            "areas": [
+                "Uptown"
+            ]
+        }
+    },
+    {
+        "query": "What's the situation in Zone C?",
+        "expected_intent": "GET_AREA_SUMMARY",
+        "expected_fields": {
+            "areas": [
+                "Zone C"
+            ]
+        }
+    },
+    {
+        "query": "Compare Zone A and Zone B",
+        "expected_intent": "COMPARE_AREAS",
+        "expected_fields": {
+            "comparison_targets": [
+                "Zone A",
+                "Zone B"
+            ]
+        }
+    },
+    {
+        "query": "Which was worse, Downtown or Uptown?",
+        "expected_intent": "COMPARE_AREAS",
+        "expected_fields": {
+            "comparison_targets": [
+                "Downtown",
+                "Uptown"
+            ]
+        }
+    },
+    {
+        "query": "Maple Street vs Oak Avenue damage?",
+        "expected_intent": "COMPARE_AREAS",
+        "expected_fields": {
+            "comparison_targets": [
+                "Maple Street",
+                "Oak Avenue"
+            ]
+        }
+    },
+    {
+        "query": "Was Zone C hit harder than Zone D?",
+        "expected_intent": "COMPARE_AREAS",
+        "expected_fields": {
+            "comparison_targets": [
+                "Zone C",
+                "Zone D"
+            ]
+        }
+    },
+    {
+        "query": "Pine Street compared to Birch Street",
+        "expected_intent": "COMPARE_AREAS",
+        "expected_fields": {
+            "comparison_targets": [
+                "Pine Street",
+                "Birch Street"
+            ]
+        }
+    },
+    {
+        "query": "Difference between Neighborhood R and Zone A?",
+        "expected_intent": "COMPARE_AREAS",
+        "expected_fields": {
+            "comparison_targets": [
+                "Neighborhood R",
+                "Zone A"
+            ]
+        }
+    },
+    {
+        "query": "Top 5 hardest hit streets",
+        "expected_intent": "GET_TOP_K",
+        "expected_fields": {
+            "top_k": 5
+        }
+    },
+    {
+        "query": "Which 3 neighborhoods had the most destroyed homes?",
+        "expected_intent": "GET_TOP_K",
+        "expected_fields": {
+            "top_k": 3,
+            "damage_level": "destroyed"
+        }
+    },
+    {
+        "query": "Top 10 areas with major damage",
+        "expected_intent": "GET_TOP_K",
+        "expected_fields": {
+            "top_k": 10,
+            "damage_level": "major"
+        }
+    },
+    {
+        "query": "Most damaged zones",
+        "expected_intent": "GET_TOP_K",
+        "expected_fields": {}
+    },
+    {
+        "query": "Show the 4 worst streets",
+        "expected_intent": "GET_TOP_K",
+        "expected_fields": {
+            "top_k": 4
+        }
+    },
+    {
+        "query": "Give me overall damage stats",
+        "expected_intent": "GET_OVERALL_STATS",
+        "expected_fields": {}
+    },
+    {
+        "query": "Total buildings destroyed?",
+        "expected_intent": "GET_OVERALL_STATS",
+        "expected_fields": {}
+    },
+    {
+        "query": "What's the overall situation?",
+        "expected_intent": "GET_OVERALL_STATS",
+        "expected_fields": {}
+    },
+    {
+        "query": "Summarize the full dataset",
+        "expected_intent": "GET_OVERALL_STATS",
+        "expected_fields": {}
+    },
+    {
+        "query": "Why was 123 Pine Street classified as destroyed?",
+        "expected_intent": "GET_MODEL_EXPLANATION",
+        "expected_fields": {
+            "addresses": [
+                "123 Pine Street"
+            ]
+        }
+    },
+    {
+        "query": "Explain the damage assessment for 42 Oak Ave",
+        "expected_intent": "GET_MODEL_EXPLANATION",
+        "expected_fields": {
+            "addresses": [
+                "42 Oak Ave"
+            ]
+        }
+    },
+    {
+        "query": "What caused 15 Cedar Blvd to be marked major?",
+        "expected_intent": "GET_MODEL_EXPLANATION",
+        "expected_fields": {
+            "addresses": [
+                "15 Cedar Blvd"
+            ]
+        }
+    },
+    {
+        "query": "Why did 9 Birch Street get that label?",
+        "expected_intent": "GET_MODEL_EXPLANATION",
+        "expected_fields": {
+            "addresses": [
+                "9 Birch Street"
+            ]
+        }
+    },
+    {
+        "query": "show me the worst areas",
+        "expected_intent": "GET_TOP_K",
+        "expected_fields": {}
+    },
+    {
+        "query": "how bad is zone a compared to zone b",
+        "expected_intent": "COMPARE_AREAS",
+        "expected_fields": {
+            "comparison_targets": [
+                "Zone A",
+                "Zone B"
+            ]
+        }
+    },
+    {
+        "query": "damage on pine street?",
+        "expected_intent": "GET_STREET_SUMMARY",
+        "expected_fields": {
+            "streets": [
+                "Pine Street"
+            ]
+        }
+    }
+]

@@ -1,0 +1,5738 @@
+[
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    100,
+                    200,
+                    150,
+                    250
+                ],
+                "bbox_area": 2500,
+                "center": [
+                    125,
+                    225
+                ],
+                "id": "region1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg001",
+        "inputs": {
+            "label_file": "s3: //.../label.json",
+            "post_image": "s3://.../post.jpg",
+            "pre_image": "s3://.../pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //.../label.json",
+        "model": {
+            "confidence": 0.95,
+            "critical_regions": [
+                {
+                    "confidence": 0.98,
+                    "damage_level": "destroyed",
+                    "id": "region1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse visible."
+        },
+        "pair": {},
+        "post_image_path": "s3: //.../post.jpg",
+        "pre_image_path": "s3: //.../pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    110,
+                    210,
+                    160,
+                    260
+                ],
+                "bbox_area": 2500,
+                "center": [
+                    135,
+                    235
+                ],
+                "id": "region1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg002",
+        "inputs": {},
+        "issues": [],
+        "label_path": "...",
+        "model": {
+            "confidence": 0.88,
+            "critical_regions": [
+                {
+                    "confidence": 0.9,
+                    "damage_level": "major-damage",
+                    "id": "region1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial roof collapse."
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg003",
+        "inputs": {},
+        "issues": [],
+        "label_path": "...",
+        "model": {
+            "confidence": 0.92,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [],
+        "error": "Pre-image missing",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg004",
+        "inputs": {},
+        "issues": [
+            "missing_pre_image"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    266,
+                    159,
+                    554,
+                    278
+                ],
+                "bbox_area": 34272,
+                "center": [
+                    410,
+                    218
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg005",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg005/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg005/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg005/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg005/label.json",
+        "model": {
+            "confidence": 0.98,
+            "critical_regions": [
+                {
+                    "confidence": 0.97,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg005/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg005/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg006",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg006/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg006/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg006/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg006/label.json",
+        "model": {
+            "confidence": 0.84,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg006/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg006/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg007",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg007/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg007/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg007/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg007/label.json",
+        "model": {
+            "confidence": 0.97,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg007/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg007/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg008",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg008/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg008/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg008/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg008/label.json",
+        "model": {
+            "confidence": 0.99,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg008/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg008/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg009",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg009/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg009/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg009/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg009/label.json",
+        "model": {
+            "confidence": 0.97,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg009/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg009/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [],
+        "error": "Processing timeout",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg010",
+        "inputs": {},
+        "issues": [
+            "corrupt_label"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [
+            {
+                "bbox": [
+                    369,
+                    295,
+                    433,
+                    515
+                ],
+                "bbox_area": 14080,
+                "center": [
+                    401,
+                    405
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    321,
+                    148,
+                    537,
+                    240
+                ],
+                "bbox_area": 19872,
+                "center": [
+                    429,
+                    194
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg011",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg011/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg011/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg011/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg011/label.json",
+        "model": {
+            "confidence": 0.98,
+            "critical_regions": [
+                {
+                    "confidence": 0.82,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.97,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg011/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg011/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    242,
+                    159,
+                    487,
+                    218
+                ],
+                "bbox_area": 14455,
+                "center": [
+                    364,
+                    188
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg012",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg012/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg012/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg012/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg012/label.json",
+        "model": {
+            "confidence": 0.84,
+            "critical_regions": [
+                {
+                    "confidence": 0.9,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg012/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg012/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    386,
+                    278,
+                    605,
+                    545
+                ],
+                "bbox_area": 58473,
+                "center": [
+                    495,
+                    411
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    372,
+                    235,
+                    632,
+                    446
+                ],
+                "bbox_area": 54860,
+                "center": [
+                    502,
+                    340
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg013",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg013/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg013/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg013/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg013/label.json",
+        "model": {
+            "confidence": 0.82,
+            "critical_regions": [
+                {
+                    "confidence": 0.75,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.99,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg013/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg013/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    394,
+                    103,
+                    525,
+                    318
+                ],
+                "bbox_area": 28165,
+                "center": [
+                    459,
+                    210
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": true,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg014",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg014/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg014/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg014/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg014/label.json",
+        "model": {
+            "confidence": 0.9,
+            "critical_regions": [
+                {
+                    "confidence": 0.62,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg014/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg014/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [
+            {
+                "bbox": [
+                    87,
+                    174,
+                    313,
+                    319
+                ],
+                "bbox_area": 32770,
+                "center": [
+                    200,
+                    246
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    286,
+                    279,
+                    369,
+                    435
+                ],
+                "bbox_area": 12948,
+                "center": [
+                    327,
+                    357
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    66,
+                    353,
+                    129,
+                    532
+                ],
+                "bbox_area": 11277,
+                "center": [
+                    97,
+                    442
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg015",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Brockway/bldg015/label.json",
+            "post_image": "s3: //damage-bucket/Brockway/bldg015/post.jpg",
+            "pre_image": "s3: //damage-bucket/Brockway/bldg015/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Brockway/bldg015/label.json",
+        "model": {
+            "confidence": 0.73,
+            "critical_regions": [
+                {
+                    "confidence": 0.65,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.76,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.6,
+                    "damage_level": "major-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Brockway/bldg015/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Brockway/bldg015/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg016",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg016/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg016/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg016/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg016/label.json",
+        "model": {
+            "confidence": 0.73,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg016/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg016/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    245,
+                    327,
+                    500,
+                    574
+                ],
+                "bbox_area": 62985,
+                "center": [
+                    372,
+                    450
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    319,
+                    164,
+                    466,
+                    290
+                ],
+                "bbox_area": 18522,
+                "center": [
+                    392,
+                    227
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg017",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg017/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg017/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg017/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg017/label.json",
+        "model": {
+            "confidence": 0.77,
+            "critical_regions": [
+                {
+                    "confidence": 0.76,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.89,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg017/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg017/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [],
+        "error": "Processing timeout",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg018",
+        "inputs": {},
+        "issues": [
+            "corrupt_label"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [],
+        "error": "Pre-image missing",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg019",
+        "inputs": {},
+        "issues": [
+            "processing_error"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg020",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Brockway/bldg020/label.json",
+            "post_image": "s3: //damage-bucket/Brockway/bldg020/post.jpg",
+            "pre_image": "s3: //damage-bucket/Brockway/bldg020/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Brockway/bldg020/label.json",
+        "model": {
+            "confidence": 0.85,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Brockway/bldg020/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Brockway/bldg020/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg021",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg021/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg021/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg021/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg021/label.json",
+        "model": {
+            "confidence": 0.7,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg021/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg021/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    135,
+                    300,
+                    352,
+                    541
+                ],
+                "bbox_area": 52297,
+                "center": [
+                    243,
+                    420
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    289,
+                    194,
+                    339,
+                    256
+                ],
+                "bbox_area": 3100,
+                "center": [
+                    314,
+                    225
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    241,
+                    262,
+                    407,
+                    319
+                ],
+                "bbox_area": 9462,
+                "center": [
+                    324,
+                    290
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg022",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg022/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg022/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg022/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg022/label.json",
+        "model": {
+            "confidence": 0.79,
+            "critical_regions": [
+                {
+                    "confidence": 0.63,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.79,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.83,
+                    "damage_level": "major-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg022/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg022/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg023",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg023/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg023/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg023/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg023/label.json",
+        "model": {
+            "confidence": 0.85,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg023/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg023/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    83,
+                    338,
+                    261,
+                    487
+                ],
+                "bbox_area": 26522,
+                "center": [
+                    172,
+                    412
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    396,
+                    309,
+                    573,
+                    475
+                ],
+                "bbox_area": 29382,
+                "center": [
+                    484,
+                    392
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    109,
+                    125,
+                    235,
+                    289
+                ],
+                "bbox_area": 20664,
+                "center": [
+                    172,
+                    207
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg024",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg024/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg024/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg024/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg024/label.json",
+        "model": {
+            "confidence": 0.89,
+            "critical_regions": [
+                {
+                    "confidence": 0.88,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.63,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.7,
+                    "damage_level": "minor-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg024/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg024/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [
+            {
+                "bbox": [
+                    198,
+                    360,
+                    480,
+                    551
+                ],
+                "bbox_area": 53862,
+                "center": [
+                    339,
+                    455
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg025",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Brockway/bldg025/label.json",
+            "post_image": "s3: //damage-bucket/Brockway/bldg025/post.jpg",
+            "pre_image": "s3: //damage-bucket/Brockway/bldg025/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Brockway/bldg025/label.json",
+        "model": {
+            "confidence": 0.89,
+            "critical_regions": [
+                {
+                    "confidence": 0.81,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Brockway/bldg025/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Brockway/bldg025/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [],
+        "error": "Pre-image missing",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg026",
+        "inputs": {},
+        "issues": [
+            "corrupt_label"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    207,
+                    271,
+                    272,
+                    425
+                ],
+                "bbox_area": 10010,
+                "center": [
+                    239,
+                    348
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    225,
+                    313,
+                    419,
+                    560
+                ],
+                "bbox_area": 47918,
+                "center": [
+                    322,
+                    436
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg027",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg027/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg027/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg027/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg027/label.json",
+        "model": {
+            "confidence": 0.84,
+            "critical_regions": [
+                {
+                    "confidence": 0.94,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.65,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg027/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg027/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    164,
+                    260,
+                    246,
+                    396
+                ],
+                "bbox_area": 11152,
+                "center": [
+                    205,
+                    328
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    115,
+                    223,
+                    346,
+                    311
+                ],
+                "bbox_area": 20328,
+                "center": [
+                    230,
+                    267
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    68,
+                    198,
+                    351,
+                    307
+                ],
+                "bbox_area": 30847,
+                "center": [
+                    209,
+                    252
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg028",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg028/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg028/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg028/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg028/label.json",
+        "model": {
+            "confidence": 0.74,
+            "critical_regions": [
+                {
+                    "confidence": 0.73,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.97,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.77,
+                    "damage_level": "major-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg028/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg028/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    156,
+                    60,
+                    211,
+                    112
+                ],
+                "bbox_area": 2860,
+                "center": [
+                    183,
+                    86
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    73,
+                    85,
+                    365,
+                    340
+                ],
+                "bbox_area": 74460,
+                "center": [
+                    219,
+                    212
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    75,
+                    291,
+                    194,
+                    360
+                ],
+                "bbox_area": 8211,
+                "center": [
+                    134,
+                    325
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg029",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg029/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg029/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg029/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg029/label.json",
+        "model": {
+            "confidence": 0.81,
+            "critical_regions": [
+                {
+                    "confidence": 0.97,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.81,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.97,
+                    "damage_level": "minor-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg029/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg029/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    229,
+                    236,
+                    505,
+                    349
+                ],
+                "bbox_area": 31188,
+                "center": [
+                    367,
+                    292
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg030",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg030/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg030/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg030/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg030/label.json",
+        "model": {
+            "confidence": 0.93,
+            "critical_regions": [
+                {
+                    "confidence": 0.69,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg030/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg030/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [
+            {
+                "bbox": [
+                    96,
+                    156,
+                    327,
+                    365
+                ],
+                "bbox_area": 48279,
+                "center": [
+                    211,
+                    260
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    52,
+                    275,
+                    121,
+                    354
+                ],
+                "bbox_area": 5451,
+                "center": [
+                    86,
+                    314
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg031",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Brockway/bldg031/label.json",
+            "post_image": "s3: //damage-bucket/Brockway/bldg031/post.jpg",
+            "pre_image": "s3: //damage-bucket/Brockway/bldg031/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Brockway/bldg031/label.json",
+        "model": {
+            "confidence": 0.79,
+            "critical_regions": [
+                {
+                    "confidence": 0.83,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.98,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Brockway/bldg031/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Brockway/bldg031/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [],
+        "error": "Processing timeout",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg032",
+        "inputs": {},
+        "issues": [
+            "processing_error"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg033",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg033/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg033/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg033/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg033/label.json",
+        "model": {
+            "confidence": 0.7,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg033/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg033/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    117,
+                    305,
+                    389,
+                    539
+                ],
+                "bbox_area": 63648,
+                "center": [
+                    253,
+                    422
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    109,
+                    76,
+                    277,
+                    249
+                ],
+                "bbox_area": 29064,
+                "center": [
+                    193,
+                    162
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg034",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg034/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg034/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg034/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg034/label.json",
+        "model": {
+            "confidence": 0.95,
+            "critical_regions": [
+                {
+                    "confidence": 0.68,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.8,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg034/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg034/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    284,
+                    326,
+                    505,
+                    415
+                ],
+                "bbox_area": 19669,
+                "center": [
+                    394,
+                    370
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    334,
+                    288,
+                    457,
+                    508
+                ],
+                "bbox_area": 27060,
+                "center": [
+                    395,
+                    398
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg035",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg035/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg035/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg035/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg035/label.json",
+        "model": {
+            "confidence": 0.76,
+            "critical_regions": [
+                {
+                    "confidence": 0.93,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.88,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg035/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg035/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    395,
+                    148,
+                    612,
+                    298
+                ],
+                "bbox_area": 32550,
+                "center": [
+                    503,
+                    223
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    284,
+                    281,
+                    548,
+                    406
+                ],
+                "bbox_area": 33000,
+                "center": [
+                    416,
+                    343
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    249,
+                    118,
+                    416,
+                    303
+                ],
+                "bbox_area": 30895,
+                "center": [
+                    332,
+                    210
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg036",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg036/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg036/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg036/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg036/label.json",
+        "model": {
+            "confidence": 0.91,
+            "critical_regions": [
+                {
+                    "confidence": 0.64,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.66,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.92,
+                    "damage_level": "no-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg036/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg036/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    192,
+                    266,
+                    352,
+                    405
+                ],
+                "bbox_area": 22240,
+                "center": [
+                    272,
+                    335
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    61,
+                    189,
+                    144,
+                    393
+                ],
+                "bbox_area": 16932,
+                "center": [
+                    102,
+                    291
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg037",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg037/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg037/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg037/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg037/label.json",
+        "model": {
+            "confidence": 0.91,
+            "critical_regions": [
+                {
+                    "confidence": 0.87,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.66,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg037/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg037/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    197,
+                    128,
+                    321,
+                    275
+                ],
+                "bbox_area": 18228,
+                "center": [
+                    259,
+                    201
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg038",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg038/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg038/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg038/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg038/label.json",
+        "model": {
+            "confidence": 0.76,
+            "critical_regions": [
+                {
+                    "confidence": 0.81,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg038/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg038/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    205,
+                    181,
+                    303,
+                    316
+                ],
+                "bbox_area": 13230,
+                "center": [
+                    254,
+                    248
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    215,
+                    383,
+                    427,
+                    602
+                ],
+                "bbox_area": 46428,
+                "center": [
+                    321,
+                    492
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    214,
+                    57,
+                    311,
+                    346
+                ],
+                "bbox_area": 28033,
+                "center": [
+                    262,
+                    201
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg039",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg039/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg039/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg039/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg039/label.json",
+        "model": {
+            "confidence": 0.89,
+            "critical_regions": [
+                {
+                    "confidence": 0.95,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.85,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.78,
+                    "damage_level": "no-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg039/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg039/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg040",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg040/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg040/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg040/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg040/label.json",
+        "model": {
+            "confidence": 0.76,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg040/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg040/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [
+            {
+                "bbox": [
+                    293,
+                    385,
+                    574,
+                    573
+                ],
+                "bbox_area": 52828,
+                "center": [
+                    433,
+                    479
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    74,
+                    90,
+                    258,
+                    250
+                ],
+                "bbox_area": 29440,
+                "center": [
+                    166,
+                    170
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg041",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg041/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg041/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg041/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg041/label.json",
+        "model": {
+            "confidence": 0.82,
+            "critical_regions": [
+                {
+                    "confidence": 0.79,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.71,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg041/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg041/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    179,
+                    340,
+                    323,
+                    570
+                ],
+                "bbox_area": 33120,
+                "center": [
+                    251,
+                    455
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    270,
+                    361,
+                    372,
+                    654
+                ],
+                "bbox_area": 29886,
+                "center": [
+                    321,
+                    507
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg042",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg042/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg042/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg042/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg042/label.json",
+        "model": {
+            "confidence": 0.76,
+            "critical_regions": [
+                {
+                    "confidence": 0.68,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.98,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg042/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg042/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [
+            {
+                "bbox": [
+                    152,
+                    246,
+                    257,
+                    447
+                ],
+                "bbox_area": 21105,
+                "center": [
+                    204,
+                    346
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    151,
+                    369,
+                    253,
+                    494
+                ],
+                "bbox_area": 12750,
+                "center": [
+                    202,
+                    431
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg043",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg043/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg043/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg043/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg043/label.json",
+        "model": {
+            "confidence": 0.8,
+            "critical_regions": [
+                {
+                    "confidence": 0.87,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.69,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg043/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg043/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    362,
+                    362,
+                    448,
+                    601
+                ],
+                "bbox_area": 20554,
+                "center": [
+                    405,
+                    481
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    394,
+                    257,
+                    552,
+                    544
+                ],
+                "bbox_area": 45346,
+                "center": [
+                    473,
+                    400
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    345,
+                    238,
+                    428,
+                    387
+                ],
+                "bbox_area": 12367,
+                "center": [
+                    386,
+                    312
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg044",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg044/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg044/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg044/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg044/label.json",
+        "model": {
+            "confidence": 0.74,
+            "critical_regions": [
+                {
+                    "confidence": 0.73,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.83,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.76,
+                    "damage_level": "destroyed",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg044/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg044/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    293,
+                    181,
+                    566,
+                    395
+                ],
+                "bbox_area": 58422,
+                "center": [
+                    429,
+                    288
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    347,
+                    310,
+                    402,
+                    577
+                ],
+                "bbox_area": 14685,
+                "center": [
+                    374,
+                    443
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg045",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg045/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg045/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg045/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg045/label.json",
+        "model": {
+            "confidence": 0.82,
+            "critical_regions": [
+                {
+                    "confidence": 0.8,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.7,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg045/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg045/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    400,
+                    133,
+                    645,
+                    405
+                ],
+                "bbox_area": 66640,
+                "center": [
+                    522,
+                    269
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    211,
+                    276,
+                    369,
+                    530
+                ],
+                "bbox_area": 40132,
+                "center": [
+                    290,
+                    403
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    78,
+                    383,
+                    243,
+                    636
+                ],
+                "bbox_area": 41745,
+                "center": [
+                    160,
+                    509
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg046",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg046/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg046/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg046/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg046/label.json",
+        "model": {
+            "confidence": 0.82,
+            "critical_regions": [
+                {
+                    "confidence": 0.82,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.88,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.68,
+                    "damage_level": "major-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg046/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg046/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    243,
+                    296,
+                    425,
+                    591
+                ],
+                "bbox_area": 53690,
+                "center": [
+                    334,
+                    443
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg047",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg047/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg047/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg047/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg047/label.json",
+        "model": {
+            "confidence": 0.76,
+            "critical_regions": [
+                {
+                    "confidence": 0.8,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg047/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg047/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [
+            {
+                "bbox": [
+                    308,
+                    302,
+                    358,
+                    468
+                ],
+                "bbox_area": 8300,
+                "center": [
+                    333,
+                    385
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    395,
+                    280,
+                    460,
+                    367
+                ],
+                "bbox_area": 5655,
+                "center": [
+                    427,
+                    323
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    80,
+                    272,
+                    271,
+                    569
+                ],
+                "bbox_area": 56727,
+                "center": [
+                    175,
+                    420
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg048",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg048/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg048/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg048/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg048/label.json",
+        "model": {
+            "confidence": 0.78,
+            "critical_regions": [
+                {
+                    "confidence": 0.75,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.93,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.66,
+                    "damage_level": "destroyed",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg048/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg048/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    195,
+                    106,
+                    446,
+                    180
+                ],
+                "bbox_area": 18574,
+                "center": [
+                    320,
+                    143
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    182,
+                    172,
+                    319,
+                    409
+                ],
+                "bbox_area": 32469,
+                "center": [
+                    250,
+                    290
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    111,
+                    123,
+                    174,
+                    275
+                ],
+                "bbox_area": 9576,
+                "center": [
+                    142,
+                    199
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg049",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg049/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg049/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg049/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg049/label.json",
+        "model": {
+            "confidence": 0.89,
+            "critical_regions": [
+                {
+                    "confidence": 0.61,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.78,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.68,
+                    "damage_level": "major-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg049/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg049/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg050",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg050/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg050/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg050/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg050/label.json",
+        "model": {
+            "confidence": 0.98,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg050/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg050/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg051",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg051/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg051/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg051/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg051/label.json",
+        "model": {
+            "confidence": 0.8,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg051/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg051/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    94,
+                    221,
+                    184,
+                    492
+                ],
+                "bbox_area": 24390,
+                "center": [
+                    139,
+                    356
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg052",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg052/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg052/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg052/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg052/label.json",
+        "model": {
+            "confidence": 0.86,
+            "critical_regions": [
+                {
+                    "confidence": 0.67,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg052/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg052/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    262,
+                    213,
+                    479,
+                    494
+                ],
+                "bbox_area": 60977,
+                "center": [
+                    370,
+                    353
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    112,
+                    259,
+                    372,
+                    553
+                ],
+                "bbox_area": 76440,
+                "center": [
+                    242,
+                    406
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg053",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg053/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg053/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg053/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg053/label.json",
+        "model": {
+            "confidence": 0.83,
+            "critical_regions": [
+                {
+                    "confidence": 0.82,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.94,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg053/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg053/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    162,
+                    83,
+                    231,
+                    253
+                ],
+                "bbox_area": 11730,
+                "center": [
+                    196,
+                    168
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg054",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg054/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg054/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg054/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg054/label.json",
+        "model": {
+            "confidence": 0.94,
+            "critical_regions": [
+                {
+                    "confidence": 0.72,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg054/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg054/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    139,
+                    319,
+                    381,
+                    441
+                ],
+                "bbox_area": 29524,
+                "center": [
+                    260,
+                    380
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg055",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg055/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg055/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg055/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg055/label.json",
+        "model": {
+            "confidence": 0.86,
+            "critical_regions": [
+                {
+                    "confidence": 0.92,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg055/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg055/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [],
+        "error": "Processing timeout",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg056",
+        "inputs": {},
+        "issues": [
+            "missing_pre_image"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    155,
+                    213,
+                    454,
+                    484
+                ],
+                "bbox_area": 81029,
+                "center": [
+                    304,
+                    348
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    193,
+                    50,
+                    456,
+                    172
+                ],
+                "bbox_area": 32086,
+                "center": [
+                    324,
+                    111
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg057",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg057/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg057/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg057/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg057/label.json",
+        "model": {
+            "confidence": 0.78,
+            "critical_regions": [
+                {
+                    "confidence": 0.95,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.82,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg057/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg057/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg058",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Brockway/bldg058/label.json",
+            "post_image": "s3: //damage-bucket/Brockway/bldg058/post.jpg",
+            "pre_image": "s3: //damage-bucket/Brockway/bldg058/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Brockway/bldg058/label.json",
+        "model": {
+            "confidence": 0.79,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Brockway/bldg058/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Brockway/bldg058/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    270,
+                    155,
+                    408,
+                    352
+                ],
+                "bbox_area": 27186,
+                "center": [
+                    339,
+                    253
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    368,
+                    179,
+                    643,
+                    476
+                ],
+                "bbox_area": 81675,
+                "center": [
+                    505,
+                    327
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg059",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg059/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg059/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg059/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg059/label.json",
+        "model": {
+            "confidence": 0.8,
+            "critical_regions": [
+                {
+                    "confidence": 0.71,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.99,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg059/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg059/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    376,
+                    349,
+                    552,
+                    488
+                ],
+                "bbox_area": 24464,
+                "center": [
+                    464,
+                    418
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg060",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg060/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg060/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg060/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg060/label.json",
+        "model": {
+            "confidence": 0.99,
+            "critical_regions": [
+                {
+                    "confidence": 0.97,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg060/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg060/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    244,
+                    253,
+                    444,
+                    464
+                ],
+                "bbox_area": 42200,
+                "center": [
+                    344,
+                    358
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    110,
+                    362,
+                    303,
+                    539
+                ],
+                "bbox_area": 34161,
+                "center": [
+                    206,
+                    450
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    122,
+                    349,
+                    177,
+                    433
+                ],
+                "bbox_area": 4620,
+                "center": [
+                    149,
+                    391
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg061",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg061/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg061/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg061/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg061/label.json",
+        "model": {
+            "confidence": 0.77,
+            "critical_regions": [
+                {
+                    "confidence": 0.8,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.83,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.85,
+                    "damage_level": "destroyed",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg061/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg061/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg062",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg062/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg062/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg062/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg062/label.json",
+        "model": {
+            "confidence": 0.85,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg062/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg062/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg063",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg063/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg063/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg063/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg063/label.json",
+        "model": {
+            "confidence": 0.86,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg063/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg063/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    361,
+                    179,
+                    548,
+                    333
+                ],
+                "bbox_area": 28798,
+                "center": [
+                    454,
+                    256
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    350,
+                    333,
+                    642,
+                    478
+                ],
+                "bbox_area": 42340,
+                "center": [
+                    496,
+                    405
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg064",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg064/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg064/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg064/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg064/label.json",
+        "model": {
+            "confidence": 0.9,
+            "critical_regions": [
+                {
+                    "confidence": 0.61,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.96,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg064/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg064/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    329,
+                    97,
+                    559,
+                    386
+                ],
+                "bbox_area": 66470,
+                "center": [
+                    444,
+                    241
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    305,
+                    394,
+                    465,
+                    693
+                ],
+                "bbox_area": 47840,
+                "center": [
+                    385,
+                    543
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg065",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg065/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg065/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg065/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg065/label.json",
+        "model": {
+            "confidence": 0.9,
+            "critical_regions": [
+                {
+                    "confidence": 0.61,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.64,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg065/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg065/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    314,
+                    123,
+                    514,
+                    308
+                ],
+                "bbox_area": 37000,
+                "center": [
+                    414,
+                    215
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    351,
+                    195,
+                    600,
+                    416
+                ],
+                "bbox_area": 55029,
+                "center": [
+                    475,
+                    305
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    266,
+                    93,
+                    524,
+                    201
+                ],
+                "bbox_area": 27864,
+                "center": [
+                    395,
+                    147
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg066",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg066/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg066/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg066/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg066/label.json",
+        "model": {
+            "confidence": 0.86,
+            "critical_regions": [
+                {
+                    "confidence": 0.84,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.86,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.62,
+                    "damage_level": "minor-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg066/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg066/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    270,
+                    160,
+                    462,
+                    238
+                ],
+                "bbox_area": 14976,
+                "center": [
+                    366,
+                    199
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg067",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg067/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg067/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg067/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg067/label.json",
+        "model": {
+            "confidence": 0.84,
+            "critical_regions": [
+                {
+                    "confidence": 0.91,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg067/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg067/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    395,
+                    233,
+                    454,
+                    460
+                ],
+                "bbox_area": 13393,
+                "center": [
+                    424,
+                    346
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    70,
+                    316,
+                    198,
+                    594
+                ],
+                "bbox_area": 35584,
+                "center": [
+                    134,
+                    455
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    156,
+                    278,
+                    238,
+                    458
+                ],
+                "bbox_area": 14760,
+                "center": [
+                    197,
+                    368
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg068",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg068/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg068/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg068/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg068/label.json",
+        "model": {
+            "confidence": 0.81,
+            "critical_regions": [
+                {
+                    "confidence": 0.92,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.93,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.69,
+                    "damage_level": "no-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg068/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg068/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg069",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Brockway/bldg069/label.json",
+            "post_image": "s3: //damage-bucket/Brockway/bldg069/post.jpg",
+            "pre_image": "s3: //damage-bucket/Brockway/bldg069/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Brockway/bldg069/label.json",
+        "model": {
+            "confidence": 0.89,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Brockway/bldg069/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Brockway/bldg069/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    339,
+                    58,
+                    517,
+                    135
+                ],
+                "bbox_area": 13706,
+                "center": [
+                    428,
+                    96
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    278,
+                    303,
+                    553,
+                    573
+                ],
+                "bbox_area": 74250,
+                "center": [
+                    415,
+                    438
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    143,
+                    118,
+                    294,
+                    248
+                ],
+                "bbox_area": 19630,
+                "center": [
+                    218,
+                    183
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg070",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg070/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg070/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg070/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg070/label.json",
+        "model": {
+            "confidence": 0.85,
+            "critical_regions": [
+                {
+                    "confidence": 0.82,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.76,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.91,
+                    "damage_level": "destroyed",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg070/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg070/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    271,
+                    169,
+                    486,
+                    342
+                ],
+                "bbox_area": 37195,
+                "center": [
+                    378,
+                    255
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    392,
+                    91,
+                    642,
+                    293
+                ],
+                "bbox_area": 50500,
+                "center": [
+                    517,
+                    192
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    113,
+                    366,
+                    252,
+                    447
+                ],
+                "bbox_area": 11259,
+                "center": [
+                    182,
+                    406
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg071",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg071/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg071/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg071/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg071/label.json",
+        "model": {
+            "confidence": 0.71,
+            "critical_regions": [
+                {
+                    "confidence": 0.74,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.79,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.71,
+                    "damage_level": "no-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg071/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg071/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    79,
+                    298,
+                    162,
+                    512
+                ],
+                "bbox_area": 17762,
+                "center": [
+                    120,
+                    405
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    328,
+                    358,
+                    404,
+                    408
+                ],
+                "bbox_area": 3800,
+                "center": [
+                    366,
+                    383
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg072",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg072/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg072/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg072/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg072/label.json",
+        "model": {
+            "confidence": 0.75,
+            "critical_regions": [
+                {
+                    "confidence": 0.96,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.89,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg072/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg072/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    272,
+                    251,
+                    492,
+                    544
+                ],
+                "bbox_area": 64460,
+                "center": [
+                    382,
+                    397
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    293,
+                    145,
+                    542,
+                    215
+                ],
+                "bbox_area": 17430,
+                "center": [
+                    417,
+                    180
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg073",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg073/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg073/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg073/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg073/label.json",
+        "model": {
+            "confidence": 0.7,
+            "critical_regions": [
+                {
+                    "confidence": 0.84,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.82,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg073/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg073/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    180,
+                    127,
+                    463,
+                    207
+                ],
+                "bbox_area": 22640,
+                "center": [
+                    321,
+                    167
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg074",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg074/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg074/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg074/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg074/label.json",
+        "model": {
+            "confidence": 0.8,
+            "critical_regions": [
+                {
+                    "confidence": 0.93,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg074/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg074/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [
+            {
+                "bbox": [
+                    190,
+                    150,
+                    286,
+                    437
+                ],
+                "bbox_area": 27552,
+                "center": [
+                    238,
+                    293
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    272,
+                    106,
+                    545,
+                    290
+                ],
+                "bbox_area": 50232,
+                "center": [
+                    408,
+                    198
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg075",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg075/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg075/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg075/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg075/label.json",
+        "model": {
+            "confidence": 0.79,
+            "critical_regions": [
+                {
+                    "confidence": 0.74,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.7,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg075/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg075/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    290,
+                    265,
+                    507,
+                    517
+                ],
+                "bbox_area": 54684,
+                "center": [
+                    398,
+                    391
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    357,
+                    116,
+                    484,
+                    386
+                ],
+                "bbox_area": 34290,
+                "center": [
+                    420,
+                    251
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": true,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg076",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg076/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg076/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg076/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg076/label.json",
+        "model": {
+            "confidence": 0.72,
+            "critical_regions": [
+                {
+                    "confidence": 0.73,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.98,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg076/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg076/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    112,
+                    285,
+                    328,
+                    572
+                ],
+                "bbox_area": 61992,
+                "center": [
+                    220,
+                    428
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    178,
+                    231,
+                    390,
+                    332
+                ],
+                "bbox_area": 21412,
+                "center": [
+                    284,
+                    281
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    365,
+                    292,
+                    534,
+                    419
+                ],
+                "bbox_area": 21463,
+                "center": [
+                    449,
+                    355
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg077",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg077/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg077/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg077/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg077/label.json",
+        "model": {
+            "confidence": 0.74,
+            "critical_regions": [
+                {
+                    "confidence": 0.9,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.88,
+                    "damage_level": "destroyed",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.86,
+                    "damage_level": "major-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg077/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg077/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg078",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg078/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg078/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg078/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg078/label.json",
+        "model": {
+            "confidence": 0.87,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg078/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg078/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    264,
+                    72,
+                    354,
+                    210
+                ],
+                "bbox_area": 12420,
+                "center": [
+                    309,
+                    141
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg079",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg079/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg079/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg079/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg079/label.json",
+        "model": {
+            "confidence": 0.73,
+            "critical_regions": [
+                {
+                    "confidence": 0.68,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg079/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg079/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Springfield",
+        "critical_regions": [
+            {
+                "bbox": [
+                    220,
+                    150,
+                    318,
+                    378
+                ],
+                "bbox_area": 22344,
+                "center": [
+                    269,
+                    264
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    209,
+                    383,
+                    349,
+                    671
+                ],
+                "bbox_area": 40320,
+                "center": [
+                    279,
+                    527
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg080",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Springfield/bldg080/label.json",
+            "post_image": "s3: //damage-bucket/Springfield/bldg080/post.jpg",
+            "pre_image": "s3: //damage-bucket/Springfield/bldg080/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Springfield/bldg080/label.json",
+        "model": {
+            "confidence": 0.98,
+            "critical_regions": [
+                {
+                    "confidence": 0.81,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.62,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Springfield/bldg080/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Springfield/bldg080/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    156,
+                    297,
+                    440,
+                    507
+                ],
+                "bbox_area": 59640,
+                "center": [
+                    298,
+                    402
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    147,
+                    296,
+                    319,
+                    571
+                ],
+                "bbox_area": 47300,
+                "center": [
+                    233,
+                    433
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    348,
+                    91,
+                    401,
+                    372
+                ],
+                "bbox_area": 14893,
+                "center": [
+                    374,
+                    231
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg081",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg081/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg081/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg081/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg081/label.json",
+        "model": {
+            "confidence": 0.88,
+            "critical_regions": [
+                {
+                    "confidence": 0.95,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.8,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.82,
+                    "damage_level": "major-damage",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg081/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg081/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [],
+        "error": "Pre-image missing",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg082",
+        "inputs": {},
+        "issues": [
+            "processing_error"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    387,
+                    381,
+                    607,
+                    538
+                ],
+                "bbox_area": 34540,
+                "center": [
+                    497,
+                    459
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg083",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg083/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg083/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg083/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg083/label.json",
+        "model": {
+            "confidence": 0.78,
+            "critical_regions": [
+                {
+                    "confidence": 0.91,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg083/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg083/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg084",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg084/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg084/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg084/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg084/label.json",
+        "model": {
+            "confidence": 0.81,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg084/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg084/pre.jpg",
+        "region_count_used": 0,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [],
+        "error": "Pre-image missing",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg085",
+        "inputs": {},
+        "issues": [
+            "processing_error"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "Shelbyville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    376,
+                    122,
+                    485,
+                    365
+                ],
+                "bbox_area": 26487,
+                "center": [
+                    430,
+                    243
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    112,
+                    124,
+                    216,
+                    398
+                ],
+                "bbox_area": 28496,
+                "center": [
+                    164,
+                    261
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg086",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Shelbyville/bldg086/label.json",
+            "post_image": "s3: //damage-bucket/Shelbyville/bldg086/post.jpg",
+            "pre_image": "s3: //damage-bucket/Shelbyville/bldg086/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Shelbyville/bldg086/label.json",
+        "model": {
+            "confidence": 0.79,
+            "critical_regions": [
+                {
+                    "confidence": 0.63,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.64,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Shelbyville/bldg086/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Shelbyville/bldg086/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    165,
+                    388,
+                    225,
+                    524
+                ],
+                "bbox_area": 8160,
+                "center": [
+                    195,
+                    456
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    317,
+                    163,
+                    589,
+                    372
+                ],
+                "bbox_area": 56848,
+                "center": [
+                    453,
+                    267
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg087",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg087/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg087/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg087/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg087/label.json",
+        "model": {
+            "confidence": 0.9,
+            "critical_regions": [
+                {
+                    "confidence": 0.73,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.79,
+                    "damage_level": "major-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg087/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg087/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [],
+        "error": "Corrupt label file",
+        "evaluation": {
+            "ground_truth": "minor-damage",
+            "match": false,
+            "model_prediction": null
+        },
+        "id": "bldg088",
+        "inputs": {},
+        "issues": [
+            "missing_pre_image"
+        ],
+        "label_path": "...",
+        "model": {
+            "confidence": null,
+            "critical_regions": [],
+            "critical_regions_unknown_ids": [],
+            "damage_level": null,
+            "reasoning": ""
+        },
+        "pair": {},
+        "post_image_path": "...",
+        "pre_image_path": "...",
+        "region_count_used": 0,
+        "status": "failed"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    186,
+                    360,
+                    396,
+                    631
+                ],
+                "bbox_area": 56910,
+                "center": [
+                    291,
+                    495
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    104,
+                    257,
+                    357,
+                    312
+                ],
+                "bbox_area": 13915,
+                "center": [
+                    230,
+                    284
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg089",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg089/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg089/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg089/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg089/label.json",
+        "model": {
+            "confidence": 0.76,
+            "critical_regions": [
+                {
+                    "confidence": 0.61,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.81,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg089/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg089/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    347,
+                    228,
+                    644,
+                    523
+                ],
+                "bbox_area": 87615,
+                "center": [
+                    495,
+                    375
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": true,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg090",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg090/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg090/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg090/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg090/label.json",
+        "model": {
+            "confidence": 1.0,
+            "critical_regions": [
+                {
+                    "confidence": 0.84,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg090/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg090/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "North Haverbrook",
+        "critical_regions": [
+            {
+                "bbox": [
+                    335,
+                    295,
+                    553,
+                    532
+                ],
+                "bbox_area": 51666,
+                "center": [
+                    444,
+                    413
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    141,
+                    310,
+                    384,
+                    551
+                ],
+                "bbox_area": 58563,
+                "center": [
+                    262,
+                    430
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg091",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/North Haverbrook/bldg091/label.json",
+            "post_image": "s3: //damage-bucket/North Haverbrook/bldg091/post.jpg",
+            "pre_image": "s3: //damage-bucket/North Haverbrook/bldg091/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/North Haverbrook/bldg091/label.json",
+        "model": {
+            "confidence": 0.95,
+            "critical_regions": [
+                {
+                    "confidence": 0.84,
+                    "damage_level": "minor-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.89,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/North Haverbrook/bldg091/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/North Haverbrook/bldg091/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    242,
+                    149,
+                    436,
+                    209
+                ],
+                "bbox_area": 11640,
+                "center": [
+                    339,
+                    179
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    153,
+                    231,
+                    275,
+                    359
+                ],
+                "bbox_area": 15616,
+                "center": [
+                    214,
+                    295
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg092",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg092/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg092/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg092/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg092/label.json",
+        "model": {
+            "confidence": 0.74,
+            "critical_regions": [
+                {
+                    "confidence": 0.65,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.95,
+                    "damage_level": "no-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg092/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg092/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    400,
+                    215,
+                    682,
+                    277
+                ],
+                "bbox_area": 17484,
+                "center": [
+                    541,
+                    246
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "destroyed",
+            "match": true,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg093",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg093/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg093/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg093/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg093/label.json",
+        "model": {
+            "confidence": 0.84,
+            "critical_regions": [
+                {
+                    "confidence": 0.63,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg093/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg093/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    195,
+                    376,
+                    361,
+                    496
+                ],
+                "bbox_area": 19920,
+                "center": [
+                    278,
+                    436
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    274,
+                    358,
+                    526,
+                    524
+                ],
+                "bbox_area": 41832,
+                "center": [
+                    400,
+                    441
+                ],
+                "id": "region_2"
+            },
+            {
+                "bbox": [
+                    155,
+                    391,
+                    422,
+                    570
+                ],
+                "bbox_area": 47793,
+                "center": [
+                    288,
+                    480
+                ],
+                "id": "region_3"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "no-damage"
+        },
+        "id": "bldg094",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg094/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg094/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg094/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg094/label.json",
+        "model": {
+            "confidence": 0.8,
+            "critical_regions": [
+                {
+                    "confidence": 0.69,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.96,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                },
+                {
+                    "confidence": 0.93,
+                    "damage_level": "destroyed",
+                    "id": "region_3"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "no-damage",
+            "reasoning": "No visible damage."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg094/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg094/pre.jpg",
+        "region_count_used": 3,
+        "status": "ok"
+    },
+    {
+        "city": "Monstropolis",
+        "critical_regions": [
+            {
+                "bbox": [
+                    343,
+                    315,
+                    639,
+                    515
+                ],
+                "bbox_area": 59200,
+                "center": [
+                    491,
+                    415
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    206,
+                    352,
+                    480,
+                    625
+                ],
+                "bbox_area": 74802,
+                "center": [
+                    343,
+                    488
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg095",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Monstropolis/bldg095/label.json",
+            "post_image": "s3: //damage-bucket/Monstropolis/bldg095/post.jpg",
+            "pre_image": "s3: //damage-bucket/Monstropolis/bldg095/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Monstropolis/bldg095/label.json",
+        "model": {
+            "confidence": 0.98,
+            "critical_regions": [
+                {
+                    "confidence": 0.99,
+                    "damage_level": "destroyed",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.84,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Monstropolis/bldg095/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Monstropolis/bldg095/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Ogdenville",
+        "critical_regions": [
+            {
+                "bbox": [
+                    391,
+                    275,
+                    680,
+                    336
+                ],
+                "bbox_area": 17629,
+                "center": [
+                    535,
+                    305
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "destroyed"
+        },
+        "id": "bldg096",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Ogdenville/bldg096/label.json",
+            "post_image": "s3: //damage-bucket/Ogdenville/bldg096/post.jpg",
+            "pre_image": "s3: //damage-bucket/Ogdenville/bldg096/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Ogdenville/bldg096/label.json",
+        "model": {
+            "confidence": 0.85,
+            "critical_regions": [
+                {
+                    "confidence": 0.7,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "destroyed",
+            "reasoning": "Complete structural collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Ogdenville/bldg096/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Ogdenville/bldg096/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Brockway",
+        "critical_regions": [
+            {
+                "bbox": [
+                    104,
+                    62,
+                    234,
+                    205
+                ],
+                "bbox_area": 18590,
+                "center": [
+                    169,
+                    133
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg097",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Brockway/bldg097/label.json",
+            "post_image": "s3: //damage-bucket/Brockway/bldg097/post.jpg",
+            "pre_image": "s3: //damage-bucket/Brockway/bldg097/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Brockway/bldg097/label.json",
+        "model": {
+            "confidence": 0.91,
+            "critical_regions": [
+                {
+                    "confidence": 0.7,
+                    "damage_level": "no-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Brockway/bldg097/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Brockway/bldg097/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [
+            {
+                "bbox": [
+                    269,
+                    147,
+                    478,
+                    271
+                ],
+                "bbox_area": 25916,
+                "center": [
+                    373,
+                    209
+                ],
+                "id": "region_1"
+            },
+            {
+                "bbox": [
+                    368,
+                    124,
+                    493,
+                    380
+                ],
+                "bbox_area": 32000,
+                "center": [
+                    430,
+                    252
+                ],
+                "id": "region_2"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": true,
+            "model_prediction": "major-damage"
+        },
+        "id": "bldg098",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg098/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg098/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg098/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg098/label.json",
+        "model": {
+            "confidence": 1.0,
+            "critical_regions": [
+                {
+                    "confidence": 0.81,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                },
+                {
+                    "confidence": 0.8,
+                    "damage_level": "minor-damage",
+                    "id": "region_2"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "major-damage",
+            "reasoning": "Large cracks and partial collapse."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg098/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg098/pre.jpg",
+        "region_count_used": 2,
+        "status": "ok"
+    },
+    {
+        "city": "Cypress Creek",
+        "critical_regions": [
+            {
+                "bbox": [
+                    234,
+                    224,
+                    406,
+                    432
+                ],
+                "bbox_area": 35776,
+                "center": [
+                    320,
+                    328
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "no-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg099",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Cypress Creek/bldg099/label.json",
+            "post_image": "s3: //damage-bucket/Cypress Creek/bldg099/post.jpg",
+            "pre_image": "s3: //damage-bucket/Cypress Creek/bldg099/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Cypress Creek/bldg099/label.json",
+        "model": {
+            "confidence": 0.81,
+            "critical_regions": [
+                {
+                    "confidence": 0.79,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Cypress Creek/bldg099/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Cypress Creek/bldg099/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    },
+    {
+        "city": "Capital City",
+        "critical_regions": [
+            {
+                "bbox": [
+                    209,
+                    90,
+                    447,
+                    382
+                ],
+                "bbox_area": 69496,
+                "center": [
+                    328,
+                    236
+                ],
+                "id": "region_1"
+            }
+        ],
+        "error": "",
+        "evaluation": {
+            "ground_truth": "major-damage",
+            "match": false,
+            "model_prediction": "minor-damage"
+        },
+        "id": "bldg100",
+        "inputs": {
+            "label_file": "s3: //damage-bucket/Capital City/bldg100/label.json",
+            "post_image": "s3: //damage-bucket/Capital City/bldg100/post.jpg",
+            "pre_image": "s3: //damage-bucket/Capital City/bldg100/pre.jpg"
+        },
+        "issues": [],
+        "label_path": "s3: //damage-bucket/Capital City/bldg100/label.json",
+        "model": {
+            "confidence": 0.85,
+            "critical_regions": [
+                {
+                    "confidence": 0.95,
+                    "damage_level": "major-damage",
+                    "id": "region_1"
+                }
+            ],
+            "critical_regions_unknown_ids": [],
+            "damage_level": "minor-damage",
+            "reasoning": "Minor cracks and broken windows."
+        },
+        "pair": {},
+        "post_image_path": "s3: //damage-bucket/Capital City/bldg100/post.jpg",
+        "pre_image_path": "s3: //damage-bucket/Capital City/bldg100/pre.jpg",
+        "region_count_used": 1,
+        "status": "ok"
+    }
+]
