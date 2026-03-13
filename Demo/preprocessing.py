@@ -3,6 +3,8 @@ from pathlib import Path
 
 from PIL import Image
 
+CROP_PADDING = 5
+
 
 def get_label_xy(imagePath: str):
     imgPath = Path(imagePath)
@@ -26,7 +28,6 @@ def get_label_xy(imagePath: str):
 
 
 def create_bounding_box(coords: str):
-    padding = 15
     points = coords.split(",")
     xs, ys = [], []
     for p in points:
@@ -36,10 +37,10 @@ def create_bounding_box(coords: str):
             ys.append(float(parts[1]))
     if not xs or not ys:
         return None
-    min_x = min(xs) - padding
-    min_y = min(ys) - padding
-    max_x = max(xs) + padding
-    max_y = max(ys) + padding
+    min_x = min(xs) - CROP_PADDING
+    min_y = min(ys) - CROP_PADDING
+    max_x = max(xs) + CROP_PADDING
+    max_y = max(ys) + CROP_PADDING
     return (int(min_x), int(min_y), int(max_x), int(max_y))
 
 

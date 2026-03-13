@@ -52,6 +52,8 @@ def call_vlm(pre_image_path, post_image_path):
                         "type": "input_text",
                         "text": (
                             "Compare these cropped pre-disaster and post-disaster building images. "
+                            "Focus only on the building itself. Ignore surrounding trees, grass, roads, dirt, smoke, and burned land unless the structure itself is damaged. "
+                            "If the building structure looks intact, return no-damage even if the surroundings changed. "
                             "Return JSON only with keys: damage_level, confidence, reasoning. "
                             "damage_level must be one of: no-damage, minor-damage, major-damage, destroyed."
                         ),

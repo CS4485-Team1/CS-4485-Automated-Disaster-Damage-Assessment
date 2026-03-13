@@ -8,8 +8,8 @@
     "match": true,
     "model": {
       "damage_level": "no-damage",
-      "confidence": 0.85,
-      "reasoning": "The post-disaster image shows the building in a similar condition to the pre-disaster image, with no visible signs of damage or structural changes."
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
     }
   },
   {
@@ -18,11 +18,11 @@
     "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg1_pre.png",
     "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg1_post.png",
     "ground_truth": "no-damage",
-    "match": false,
+    "match": true,
     "model": {
-      "damage_level": "minor-damage",
-      "confidence": 0.75,
-      "reasoning": "The post-disaster image shows some alterations in the structure, indicating possible minor damage, but the overall integrity of the building appears to be intact."
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
     }
   },
   {
@@ -31,11 +31,11 @@
     "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg2_pre.png",
     "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg2_post.png",
     "ground_truth": "no-damage",
-    "match": false,
+    "match": true,
     "model": {
-      "damage_level": "minor-damage",
-      "confidence": 0.85,
-      "reasoning": "The post-disaster image shows some changes in the color and texture of the building's surface, indicating possible minor damage, while the overall structure appears intact."
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
     }
   },
   {
@@ -47,8 +47,8 @@
     "match": true,
     "model": {
       "damage_level": "no-damage",
-      "confidence": 0.85,
-      "reasoning": "The post-disaster image shows the building structure intact with no visible signs of damage compared to the pre-disaster image."
+      "confidence": 0.9,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
     }
   },
   {
@@ -60,8 +60,8 @@
     "match": true,
     "model": {
       "damage_level": "no-damage",
-      "confidence": 0.85,
-      "reasoning": "The post-disaster image shows no significant changes or visible damage compared to the pre-disaster image. The structure appears intact and unchanged."
+      "confidence": 0.9,
+      "reasoning": "The building structure appears intact in both images, showing no visible signs of damage despite changes in the surroundings."
     }
   },
   {
@@ -70,11 +70,11 @@
     "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg5_pre.png",
     "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg5_post.png",
     "ground_truth": "no-damage",
-    "match": false,
+    "match": true,
     "model": {
-      "damage_level": "minor-damage",
-      "confidence": 0.75,
-      "reasoning": "The post-disaster image shows some alterations in the structure and surroundings compared to the pre-disaster image, indicating possible minor damage."
+      "damage_level": "no-damage",
+      "confidence": 0.9,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
     }
   },
   {
@@ -86,8 +86,8 @@
     "match": true,
     "model": {
       "damage_level": "no-damage",
-      "confidence": 0.85,
-      "reasoning": "The post-disaster image shows no significant changes or visible damage compared to the pre-disaster image. Both images depict the same structures with similar conditions."
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both pre-disaster and post-disaster images, showing no visible signs of damage."
     }
   },
   {
@@ -96,11 +96,11 @@
     "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg7_pre.png",
     "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg7_post.png",
     "ground_truth": "no-damage",
-    "match": false,
+    "match": true,
     "model": {
-      "damage_level": "minor-damage",
-      "confidence": 0.75,
-      "reasoning": "The post-disaster image shows some visible changes in the building structure compared to the pre-disaster image, indicating potential minor damage."
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
     }
   },
   {
@@ -109,11 +109,11 @@
     "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg8_pre.png",
     "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg8_post.png",
     "ground_truth": "no-damage",
-    "match": false,
+    "match": true,
     "model": {
-      "damage_level": "minor-damage",
-      "confidence": 0.75,
-      "reasoning": "The post-disaster image shows changes in the surrounding area and potential alterations to the building's structure, indicating some level of damage, but the building remains largely intact."
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
     }
   },
   {
@@ -126,7 +126,137 @@
     "model": {
       "damage_level": "no-damage",
       "confidence": 0.95,
-      "reasoning": "The post-disaster image shows the building in a similar condition to the pre-disaster image, with no visible signs of damage or structural changes."
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg10",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg10_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg10_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg11",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg11_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg11_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg12",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg12_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg12_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg13",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg13_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg13_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg14",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg14_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg14_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg15",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg15_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg15_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both pre-disaster and post-disaster images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg16",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg16_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg16_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.9,
+      "reasoning": "The building structure appears intact in both images, with no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg17",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg17_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg17_post.png",
+    "ground_truth": "no-damage",
+    "match": false,
+    "model": {
+      "damage_level": "minor-damage",
+      "confidence": 0.85,
+      "reasoning": "The building structure shows signs of discoloration and possible surface damage, indicating minor damage despite the overall structure appearing intact."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg18",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg18_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg18_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both images, showing no visible signs of damage."
+    }
+  },
+  {
+    "id": "santa-rosa-00000002_bldg19",
+    "city": "santa-rosa",
+    "pre_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg19_pre.png",
+    "post_image_path": "C:\\Users\\musta\\CS-4485-Automated-Disaster-Damage-Assessment\\Demo\\output\\building_crops\\santa-rosa-00000002_bldg19_post.png",
+    "ground_truth": "no-damage",
+    "match": true,
+    "model": {
+      "damage_level": "no-damage",
+      "confidence": 0.95,
+      "reasoning": "The building structure appears intact in both pre-disaster and post-disaster images, with no visible signs of damage."
     }
   }
 ]
