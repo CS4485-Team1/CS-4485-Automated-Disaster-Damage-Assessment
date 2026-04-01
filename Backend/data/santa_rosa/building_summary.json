@@ -1,22 +1,22 @@
 {
-  "total": 12934,
-  "matched": 9714,
-  "accuracy": 0.751,
+  "total": 12950,
+  "matched": 9730,
+  "accuracy": 0.7514,
   "ground_truth_counts": {
-    "no-damage": 9269,
+    "no-damage": 9285,
     "destroyed": 3471,
     "un-classified": 53,
     "major-damage": 63,
     "minor-damage": 78
   },
   "prediction_counts": {
-    "no-damage": 10584,
+    "no-damage": 10600,
     "major-damage": 1521,
     "minor-damage": 168,
     "destroyed": 661
   },
   "confusion_counts": {
-    "no-damage -> no-damage": 9073,
+    "no-damage -> no-damage": 9089,
     "no-damage -> major-damage": 54,
     "no-damage -> minor-damage": 111,
     "destroyed -> destroyed": 622,

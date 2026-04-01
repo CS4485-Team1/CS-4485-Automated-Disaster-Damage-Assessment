@@ -50,6 +50,20 @@ def save_json(path, data):
         os.remove(temp_path)
 
 
+def upsert_result(results, item):
+    item_id = item.get("id")
+    if not item_id:
+        results.append(item)
+        return
+
+    for index, existing in enumerate(results):
+        if isinstance(existing, dict) and existing.get("id") == item_id:
+            results[index] = item
+            return
+
+    results.append(item)
+
+
 def build_evaluation_records(results):
     evaluation = []
 
@@ -140,7 +154,7 @@ def run_dataset(
     results = load_existing_results(results_path)
     processed_ids = set()
     for item in results:
-        if isinstance(item, dict) and item.get("id"):
+        if isinstance(item, dict) and item.get("id") and item.get("status") == "ok":
             processed_ids.add(item.get("id"))
 
     skipped_done = 0
@@ -179,7 +193,7 @@ def run_dataset(
                 post_image_path,
                 ground_truth=ground_truth,
             )
-            results.append({
+            upsert_result(results, {
                 "id": pair_id,
                 "scene_id": pair.get("scene_id"),
                 "city": pair.get("city"),
@@ -191,7 +205,7 @@ def run_dataset(
             completed_new += 1
         except Exception as error:
             failed += 1
-            results.append({
+            upsert_result(results, {
                 "id": pair_id,
                 "scene_id": pair.get("scene_id"),
                 "city": pair.get("city"),
@@ -212,7 +226,7 @@ def run_dataset(
         if pair_id and pair_id in processed_ids:
             continue
 
-        results.append({
+        upsert_result(results, {
             "id": pair_id,
             "scene_id": pair.get("scene_id"),
             "status": "invalid_pair",
