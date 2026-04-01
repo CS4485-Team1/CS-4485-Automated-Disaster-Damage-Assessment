@@ -1,11 +1,15 @@
-﻿import json
+import json
 import os
 import time
+from collections import Counter
 
-from app.services.preprocessing_adapter import load_normalized_pairs_with_issues
-from app.vlm.service import assess_damage_with_retry
+from app.services.house_crop_adapter import load_normalized_building_pairs_with_issues
+from app.vlm.building_service import assess_building_damage_with_retry
 
-RESULTS_PATH = os.path.join("data", "santa_rosa", "results.json")
+RESULTS_PATH = os.path.join("data", "santa_rosa", "building_results.json")
+EVALUATION_PATH = os.path.join("data", "santa_rosa", "building_evaluation.json")
+SUMMARY_PATH = os.path.join("data", "santa_rosa", "building_summary.json")
+CROP_ROOT = os.path.join("data", "santa_rosa", "building_crops")
 
 
 def load_existing_results(results_path):
@@ -25,37 +29,113 @@ def load_existing_results(results_path):
     return []
 
 
-def save_results(results_path, results):
-    os.makedirs(os.path.dirname(results_path), exist_ok=True)
-    temp_path = f"{results_path}.tmp"
+def save_json(path, data):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    temp_path = f"{path}.tmp"
 
     with open(temp_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
+        json.dump(data, f, indent=2)
 
     for _ in range(3):
         try:
-            os.replace(temp_path, results_path)
+            os.replace(temp_path, path)
             return
         except PermissionError:
             time.sleep(0.2)
 
-    with open(results_path, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=2)
 
     if os.path.exists(temp_path):
         os.remove(temp_path)
 
 
-def get_label_path_from_post_image(post_image_path):
-    images_dir = os.path.dirname(post_image_path)
-    data_dir = os.path.dirname(images_dir)
-    labels_dir = os.path.join(data_dir, "labels")
-    label_name = os.path.basename(post_image_path).replace(".png", ".json")
-    return os.path.join(labels_dir, label_name)
+def build_evaluation_records(results):
+    evaluation = []
+
+    for item in results:
+        if item.get("status") != "ok":
+            continue
+
+        model = item.get("model", {})
+        eval_data = item.get("evaluation", {})
+        evaluation.append({
+            "id": item.get("id"),
+            "scene_id": item.get("scene_id"),
+            "city": item.get("city"),
+            "ground_truth": eval_data.get("ground_truth"),
+            "prediction": eval_data.get("prediction"),
+            "match": eval_data.get("match"),
+            "confidence": model.get("confidence"),
+            "reasoning": model.get("reasoning"),
+        })
+
+    return evaluation
 
 
-def run_dataset(image_root="data/santa_rosa/images", results_path=RESULTS_PATH):
-    valid_pairs, invalid_pairs = load_normalized_pairs_with_issues(image_root=image_root)
+def build_summary(evaluation):
+    total = len(evaluation)
+    matched = 0
+    ground_truth_counts = Counter()
+    prediction_counts = Counter()
+    confusion_counts = Counter()
+    mismatches = []
+
+    for item in evaluation:
+        ground_truth = item.get("ground_truth")
+        prediction = item.get("prediction")
+        match = item.get("match")
+
+        if match is True:
+            matched += 1
+
+        if ground_truth:
+            ground_truth_counts[ground_truth] += 1
+        if prediction:
+            prediction_counts[prediction] += 1
+        if ground_truth and prediction:
+            confusion_counts[f"{ground_truth} -> {prediction}"] += 1
+
+        if match is False:
+            mismatches.append({
+                "id": item.get("id"),
+                "scene_id": item.get("scene_id"),
+                "ground_truth": ground_truth,
+                "prediction": prediction,
+                "confidence": item.get("confidence"),
+                "reasoning": item.get("reasoning"),
+            })
+
+    accuracy = 0.0
+    if total:
+        accuracy = matched / total
+
+    return {
+        "total": total,
+        "matched": matched,
+        "accuracy": round(accuracy, 4),
+        "ground_truth_counts": dict(ground_truth_counts),
+        "prediction_counts": dict(prediction_counts),
+        "confusion_counts": dict(confusion_counts),
+        "mismatches": mismatches,
+    }
+
+
+def run_dataset(
+    image_root="data/santa_rosa/images",
+    crop_root=CROP_ROOT,
+    results_path=RESULTS_PATH,
+    evaluation_path=EVALUATION_PATH,
+    summary_path=SUMMARY_PATH,
+    scene_id=None,
+    limit=None,
+    progress_every=25,
+):
+    valid_pairs, invalid_pairs = load_normalized_building_pairs_with_issues(
+        image_root=image_root,
+        crop_root=crop_root,
+        scene_id=scene_id,
+    )
 
     results = load_existing_results(results_path)
     processed_ids = set()
@@ -64,14 +144,22 @@ def run_dataset(image_root="data/santa_rosa/images", results_path=RESULTS_PATH):
             processed_ids.add(item.get("id"))
 
     skipped_done = 0
-    skipped_missing_label = 0
     failed = 0
     completed_new = 0
 
-    for pair in valid_pairs:
+    selected_pairs = valid_pairs
+    if isinstance(limit, int) and limit > 0:
+        selected_pairs = valid_pairs[:limit]
+
+    total_selected = len(selected_pairs)
+
+    for index, pair in enumerate(selected_pairs, start=1):
         pair_id = pair.get("id")
         if not pair_id:
             continue
+
+        if progress_every and ((index == 1) or (index % progress_every == 0) or (index == total_selected)):
+            print(f"Progress {index}/{total_selected} current={pair_id}")
 
         if pair_id in processed_ids:
             skipped_done += 1
@@ -79,35 +167,25 @@ def run_dataset(image_root="data/santa_rosa/images", results_path=RESULTS_PATH):
 
         pre_image_path = pair.get("pre_image_path")
         post_image_path = pair.get("post_image_path")
+        ground_truth = pair.get("ground_truth")
 
         if not isinstance(pre_image_path, str) or not isinstance(post_image_path, str):
             failed += 1
             continue
 
-        label_path = get_label_path_from_post_image(post_image_path)
-        if not os.path.exists(label_path):
-            skipped_missing_label += 1
-            results.append({
-                "id": pair_id,
-                "city": pair.get("city"),
-                "status": "skipped_missing_label",
-                "pre_image_path": pre_image_path,
-                "post_image_path": post_image_path,
-                "label_path": label_path,
-            })
-            processed_ids.add(pair_id)
-            save_results(results_path, results)
-            continue
-
         try:
-            prediction = assess_damage_with_retry(pre_image_path, post_image_path, label_path)
+            prediction = assess_building_damage_with_retry(
+                pre_image_path,
+                post_image_path,
+                ground_truth=ground_truth,
+            )
             results.append({
                 "id": pair_id,
+                "scene_id": pair.get("scene_id"),
                 "city": pair.get("city"),
                 "status": "ok",
                 "pre_image_path": pre_image_path,
                 "post_image_path": post_image_path,
-                "label_path": label_path,
                 **prediction,
             })
             completed_new += 1
@@ -115,16 +193,17 @@ def run_dataset(image_root="data/santa_rosa/images", results_path=RESULTS_PATH):
             failed += 1
             results.append({
                 "id": pair_id,
+                "scene_id": pair.get("scene_id"),
                 "city": pair.get("city"),
                 "status": "failed",
                 "error": str(error),
                 "pre_image_path": pre_image_path,
                 "post_image_path": post_image_path,
-                "label_path": label_path,
+                "ground_truth": ground_truth,
             })
 
         processed_ids.add(pair_id)
-        save_results(results_path, results)
+        save_json(results_path, results)
 
     for item in invalid_pairs:
         pair = item.get("pair", {})
@@ -135,6 +214,7 @@ def run_dataset(image_root="data/santa_rosa/images", results_path=RESULTS_PATH):
 
         results.append({
             "id": pair_id,
+            "scene_id": pair.get("scene_id"),
             "status": "invalid_pair",
             "issues": item.get("issues", []),
             "pair": pair,
@@ -143,17 +223,25 @@ def run_dataset(image_root="data/santa_rosa/images", results_path=RESULTS_PATH):
         if pair_id:
             processed_ids.add(pair_id)
 
-        save_results(results_path, results)
+        save_json(results_path, results)
+
+    evaluation = build_evaluation_records(results)
+    summary = build_summary(evaluation)
+    save_json(evaluation_path, evaluation)
+    save_json(summary_path, summary)
 
     print(
         "Done "
         f"new_ok={completed_new} "
         f"already_done={skipped_done} "
-        f"missing_label={skipped_missing_label} "
         f"failed={failed} "
-        f"invalid_pairs={len(invalid_pairs)}"
+        f"invalid_pairs={len(invalid_pairs)} "
+        f"selected={total_selected}"
     )
-    print(f"Saved: {results_path}")
+    print(f"Saved results: {results_path}")
+    print(f"Saved evaluation: {evaluation_path}")
+    print(f"Saved summary: {summary_path}")
+    print(f"Accuracy: {summary['matched']}/{summary['total']}")
 
 
 if __name__ == "__main__":

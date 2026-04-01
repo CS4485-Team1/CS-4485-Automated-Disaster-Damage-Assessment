@@ -32,3 +32,6 @@ coverage.xml
 temp_images/
 uvicorn
 app/data/images/test/
+data/santa_rosa/building_crops/
+data/santa_rosa/test_building_*.json
+data/santa_rosa/smoke_building_*.json
