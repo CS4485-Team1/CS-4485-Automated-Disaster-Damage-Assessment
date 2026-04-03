@@ -1,5 +1,6 @@
 import json
 import sys
+from collections import Counter
 from pathlib import Path
 
 from adapter import normalize_building_pairs
@@ -10,6 +11,71 @@ from service import call_vlm_with_retry
 def save_json(path, data):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
+
+
+def build_evaluation_summary(results):
+    total = len(results)
+    matched = 0
+    ground_truth_counts = Counter()
+    prediction_counts = Counter()
+    confusion_counts = Counter()
+    mismatches = []
+
+    for item in results:
+        ground_truth = item.get("ground_truth")
+        prediction = item.get("model", {}).get("damage_level")
+        match = item.get("match")
+
+        if match is True:
+            matched += 1
+
+        if ground_truth:
+            ground_truth_counts[ground_truth] += 1
+        if prediction:
+            prediction_counts[prediction] += 1
+        if ground_truth and prediction:
+            confusion_counts[f"{ground_truth} -> {prediction}"] += 1
+
+        if match is False:
+            mismatches.append({
+                "id": item.get("id"),
+                "ground_truth": ground_truth,
+                "prediction": prediction,
+                "confidence": item.get("model", {}).get("confidence"),
+                "reasoning": item.get("model", {}).get("reasoning"),
+            })
+
+    accuracy = 0.0
+    if total:
+        accuracy = matched / total
+
+    return {
+        "total": total,
+        "matched": matched,
+        "accuracy": round(accuracy, 4),
+        "ground_truth_counts": dict(ground_truth_counts),
+        "prediction_counts": dict(prediction_counts),
+        "confusion_counts": dict(confusion_counts),
+        "mismatches": mismatches,
+    }
+
+
+def build_evaluation_records(results):
+    evaluation = []
+
+    for item in results:
+        model = item.get("model", {})
+        evaluation.append({
+            "id": item.get("id"),
+            "city": item.get("city"),
+            "ground_truth": item.get("ground_truth"),
+            "prediction": model.get("damage_level"),
+            "match": item.get("match"),
+            "confidence": model.get("confidence"),
+            "reasoning": model.get("reasoning"),
+        })
+
+    return evaluation
 
 
 def run_preprocessing(image_dir, output_dir, scene_id=None):
@@ -33,12 +99,18 @@ def run_preprocessing(image_dir, output_dir, scene_id=None):
 def run_vlm_demo(output_dir, limit=10, scene_id=None):
     pairs_name = "building_pairs.json"
     results_name = "vlm_results.json"
+    evaluation_name = "vlm_evaluation.json"
+    summary_name = "vlm_summary.json"
     if scene_id:
         pairs_name = f"{scene_id}_building_pairs.json"
         results_name = f"{scene_id}_vlm_results.json"
+        evaluation_name = f"{scene_id}_vlm_evaluation.json"
+        summary_name = f"{scene_id}_vlm_summary.json"
 
     pairs_path = Path(output_dir) / pairs_name
     results_path = Path(output_dir) / results_name
+    evaluation_path = Path(output_dir) / evaluation_name
+    summary_path = Path(output_dir) / summary_name
 
     with open(pairs_path, "r", encoding="utf-8") as f:
         pairs = json.load(f)
@@ -61,8 +133,42 @@ def run_vlm_demo(output_dir, limit=10, scene_id=None):
         })
 
     save_json(results_path, results)
+    evaluation = build_evaluation_records(results)
+    save_json(evaluation_path, evaluation)
+    summary = build_evaluation_summary(results)
+    save_json(summary_path, summary)
+
     print(f"vlm_pairs_run={len(results)}")
     print(f"vlm_results={results_path}")
+    print(f"vlm_evaluation={evaluation_path}")
+    print(f"accuracy={summary['matched']}/{summary['total']}")
+    print(f"vlm_summary={summary_path}")
+
+
+def summarize_results(output_dir, scene_id=None):
+    results_name = "vlm_results.json"
+    evaluation_name = "vlm_evaluation.json"
+    summary_name = "vlm_summary.json"
+    if scene_id:
+        results_name = f"{scene_id}_vlm_results.json"
+        evaluation_name = f"{scene_id}_vlm_evaluation.json"
+        summary_name = f"{scene_id}_vlm_summary.json"
+
+    results_path = Path(output_dir) / results_name
+    evaluation_path = Path(output_dir) / evaluation_name
+    summary_path = Path(output_dir) / summary_name
+
+    with open(results_path, "r", encoding="utf-8") as f:
+        results = json.load(f)
+
+    evaluation = build_evaluation_records(results)
+    save_json(evaluation_path, evaluation)
+    summary = build_evaluation_summary(results)
+    save_json(summary_path, summary)
+
+    print(f"vlm_evaluation={evaluation_path}")
+    print(f"accuracy={summary['matched']}/{summary['total']}")
+    print(f"vlm_summary={summary_path}")
 
 
 if __name__ == "__main__":
@@ -75,6 +181,8 @@ if __name__ == "__main__":
         if len(sys.argv) > 2:
             limit = int(sys.argv[2])
         run_vlm_demo(str(output_dir), limit=limit)
+    elif len(sys.argv) > 2 and sys.argv[1] == "summary":
+        summarize_results(str(output_dir), scene_id=sys.argv[2])
     elif len(sys.argv) > 2 and sys.argv[1] == "scene-vlm":
         limit = 10
         if len(sys.argv) > 3:

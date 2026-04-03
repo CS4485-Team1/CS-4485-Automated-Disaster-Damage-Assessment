@@ -1,0 +1,25 @@
+{
+  "total": 20,
+  "matched": 19,
+  "accuracy": 0.95,
+  "ground_truth_counts": {
+    "no-damage": 20
+  },
+  "prediction_counts": {
+    "no-damage": 19,
+    "minor-damage": 1
+  },
+  "confusion_counts": {
+    "no-damage -> no-damage": 19,
+    "no-damage -> minor-damage": 1
+  },
+  "mismatches": [
+    {
+      "id": "santa-rosa-00000002_bldg17",
+      "ground_truth": "no-damage",
+      "prediction": "minor-damage",
+      "confidence": 0.85,
+      "reasoning": "The building structure shows signs of discoloration and possible surface damage, indicating minor damage despite the overall structure appearing intact."
+    }
+  ]
+}
