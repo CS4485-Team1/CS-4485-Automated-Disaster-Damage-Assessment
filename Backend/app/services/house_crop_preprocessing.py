@@ -6,9 +6,27 @@ from PIL import Image
 CROP_PADDING = 5
 
 
-def get_label_data(image_path: str):
+def resolve_label_path(image_path: str, label_directory: str | None = None):
     img_path = Path(image_path)
-    label_path = img_path.parent.parent / "labels" / img_path.name.replace(".png", ".json")
+    label_name = img_path.name.replace(".png", ".json")
+    candidate_paths = []
+
+    if label_directory:
+        candidate_paths.append(Path(label_directory) / label_name)
+
+    candidate_paths.append(img_path.parent.parent / "labels" / label_name)
+    candidate_paths.append(img_path.parents[2] / "labels" / label_name)
+    candidate_paths.append(img_path.parents[2] / "labelsCapstone" / label_name)
+
+    for candidate_path in candidate_paths:
+        if candidate_path.exists():
+            return candidate_path
+
+    raise FileNotFoundError(f"Label file not found for image: {image_path}")
+
+
+def get_label_data(image_path: str, label_directory: str | None = None):
+    label_path = resolve_label_path(image_path, label_directory=label_directory)
 
     with open(label_path, "r", encoding="utf-8") as f:
         data = json.load(f)
@@ -50,7 +68,12 @@ def create_bounding_box(coords: str):
     return (int(min_x), int(min_y), int(max_x), int(max_y))
 
 
-def get_building_pairs(image_directory: str, output_crop_directory: str, scene_id: str | None = None):
+def get_building_pairs(
+    image_directory: str,
+    output_crop_directory: str,
+    scene_id: str | None = None,
+    label_directory: str | None = None,
+):
     valid_pairs = []
     grouped = {}
     path = Path(image_directory)
@@ -79,7 +102,10 @@ def get_building_pairs(image_directory: str, output_crop_directory: str, scene_i
             grouped[pair_id]["pre"] = str(img_path)
         elif "post" in time:
             grouped[pair_id]["post"] = str(img_path)
-            grouped[pair_id]["labels_data"] = get_label_data(str(img_path))
+            grouped[pair_id]["labels_data"] = get_label_data(
+                str(img_path),
+                label_directory=label_directory,
+            )
 
     for pair_id, data in grouped.items():
         if "pre" not in data or "post" not in data or "labels_data" not in data:

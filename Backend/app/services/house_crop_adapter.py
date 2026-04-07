@@ -41,8 +41,18 @@ def validate_building_pair(pair):
     return len(issues) == 0, issues
 
 
-def load_and_normalize_building_pairs(image_root=DEFAULT_IMAGE_ROOT, crop_root=DEFAULT_CROP_ROOT, scene_id=None):
-    raw_pairs = get_building_pairs(image_root, crop_root, scene_id=scene_id)
+def load_and_normalize_building_pairs(
+    image_root=DEFAULT_IMAGE_ROOT,
+    crop_root=DEFAULT_CROP_ROOT,
+    scene_id=None,
+    label_root=None,
+):
+    raw_pairs = get_building_pairs(
+        image_root,
+        crop_root,
+        scene_id=scene_id,
+        label_directory=label_root,
+    )
     normalized = []
 
     for item in raw_pairs:
@@ -51,8 +61,18 @@ def load_and_normalize_building_pairs(image_root=DEFAULT_IMAGE_ROOT, crop_root=D
     return normalized
 
 
-def load_normalized_building_pairs_with_issues(image_root=DEFAULT_IMAGE_ROOT, crop_root=DEFAULT_CROP_ROOT, scene_id=None):
-    normalized = load_and_normalize_building_pairs(image_root=image_root, crop_root=crop_root, scene_id=scene_id)
+def load_normalized_building_pairs_with_issues(
+    image_root=DEFAULT_IMAGE_ROOT,
+    crop_root=DEFAULT_CROP_ROOT,
+    scene_id=None,
+    label_root=None,
+):
+    normalized = load_and_normalize_building_pairs(
+        image_root=image_root,
+        crop_root=crop_root,
+        scene_id=scene_id,
+        label_root=label_root,
+    )
     valid = []
     invalid = []
 

@@ -33,14 +33,20 @@ def save_json(path, data):
     os.makedirs(os.path.dirname(path), exist_ok=True)
     temp_path = f"{path}.tmp"
 
-    with open(temp_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=2)
+    def write_temp_file():
+        with open(temp_path, "w", encoding="utf-8") as f:
+            json.dump(data, f, indent=2)
+
+    write_temp_file()
 
     for _ in range(3):
         try:
             os.replace(temp_path, path)
             return
-        except PermissionError:
+        except (PermissionError, FileNotFoundError):
+            # Some Windows setups briefly lose the temp file during replace.
+            if not os.path.exists(temp_path):
+                write_temp_file()
             time.sleep(0.2)
 
     with open(path, "w", encoding="utf-8") as f:
@@ -138,6 +144,7 @@ def build_summary(evaluation):
 def run_dataset(
     image_root="data/santa_rosa/images",
     crop_root=CROP_ROOT,
+    label_root=None,
     results_path=RESULTS_PATH,
     evaluation_path=EVALUATION_PATH,
     summary_path=SUMMARY_PATH,
@@ -149,6 +156,7 @@ def run_dataset(
         image_root=image_root,
         crop_root=crop_root,
         scene_id=scene_id,
+        label_root=label_root,
     )
 
     results = load_existing_results(results_path)
