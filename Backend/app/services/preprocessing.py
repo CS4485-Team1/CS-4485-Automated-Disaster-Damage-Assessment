@@ -50,6 +50,30 @@ def get_pairs(image_directory: str):
             })
     return validPairs
 
+        with Image.open(data['pre']) as pre, Image.open(data["post"]) as post:
+            for idx, item in enumerate(data["labels_data"]):
+                points = item["coords"]
+                subtype = item["subtype"]
+                
+                bounding = create_bounding_box(points)
+                pre_crop = pre.crop(bounding)
+                post_crop = post.crop(bounding)
+                
+                pre_crop_path = crop / f"{pair_id}_bldg{idx}_pre.png"
+                post_crop_path = crop / f"{pair_id}_bldg{idx}_post.png"
+                
+                pre_crop.save(pre_crop_path)
+                post_crop.save(post_crop_path)
+                
+                valid_building_pairs.append({
+                    "building_id": f"{pair_id}_bldg{idx}",
+                    "city": data["city"],
+                    "subtype": subtype,
+                    "pre_crop": str(pre_crop_path),
+                    "post_crop": str(post_crop_path),
+                    "bbox": list(bounding),
+                })
+    return valid_building_pairs
 
 if __name__ == "__main__":
     script_dir = Path(__file__).parent 
