@@ -62,7 +62,6 @@ type BoundingBox = {
 }
 
 function App() {
-  const [selectedDisaster, setSelectedDisaster] = useState<string | null>(null);
   const [damageFilter, setDamageFilter] = useState<{
     noDamage: boolean;
     minorDamage: boolean;
@@ -391,10 +390,6 @@ function App() {
                     })
                     .map(({ building_id, subtype, bbox }) => {
                       const [minX, minY, maxX, maxY] = bbox;
-                      const color =
-                        subtype === "no-damage" ? "#22c55e" :
-                        subtype === "minor-damage" ? "#f59e0b" :
-                        "#ef4444";
 
                       return (
                         <rect
