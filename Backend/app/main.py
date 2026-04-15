@@ -1,27 +1,14 @@
-from fastapi import FastAPI
-from datetime import datetime
-import random
+﻿from fastapi import FastAPI
 
-from fastapi import FastAPI, HTTPException
-from fastapi.middleware.cors import CORSMiddleware
-from app.models.models import ChatRequest, ChatResponse
-from app.data.data import retrieve_damage_data, format_context
-from .services.llm import LLMService
-from app.api.endpoints import chat, query
-import logging
+from app.vlm.router import router as vlm_router
 
 from app.api.endpoints.bounding_boxes import router as bounding_boxes_router
 
 
 app = FastAPI(title="Disaster Assessment Chatbot API")
+app = FastAPI()
+app.include_router(vlm_router)
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 @app.get("/greet/{name}")
 def greet_user(name: str):
@@ -38,3 +25,6 @@ def get_time():
 app.include_router(chat.router, prefix="/api/chat", tags=["chat"])
 app.include_router(query.router, prefix="/api/query", tags=["query"])
 app.include_router(bounding_boxes_router, prefix="/api/bounding-boxes", tags=["bounding-boxes"])
+@app.get("/health")
+def health():
+    return {"status": "ok"}
