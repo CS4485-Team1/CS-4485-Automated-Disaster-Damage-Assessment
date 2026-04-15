@@ -10,6 +10,9 @@ from .services.llm import LLMService
 from app.api.endpoints import chat, query
 import logging
 
+from app.api.endpoints.bounding_boxes import router as bounding_boxes_router
+
+
 app = FastAPI(title="Disaster Assessment Chatbot API")
 
 app.add_middleware(
@@ -34,3 +37,4 @@ def get_time():
 
 app.include_router(chat.router, prefix="/api/chat", tags=["chat"])
 app.include_router(query.router, prefix="/api/query", tags=["query"])
+app.include_router(bounding_boxes_router, prefix="/api/bounding-boxes", tags=["bounding-boxes"])

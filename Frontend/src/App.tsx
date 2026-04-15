@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useMemo, useState, useEffect } from "react";
 import "./App.css";
 
 type DamageLevel = "noDamage" | "minorDamage" | "severeDamage";
@@ -55,6 +55,12 @@ type ChatMessage = {
   text: string;
 };
 
+type BoundingBox = {
+  building_id: string;
+  subtype: string;
+  bbox: [number, number, number, number]; 
+}
+
 function App() {
   const [selectedDisaster, setSelectedDisaster] = useState<string | null>(null);
   const [damageFilter, setDamageFilter] = useState<{
@@ -82,6 +88,17 @@ function App() {
       text: "Ask me about damage patterns, affected areas, or overall impact.",
     },
   ]);
+
+  const [boundingBoxes, setBoundingBoxes] = useState<BoundingBox[]>([]);
+  useEffect(() => {
+  fetch("http://localhost:8000/api/bounding-boxes/?image_id=santa-rosa-00000000")
+    .then((r) => r.json())
+    .then((data) => {
+      console.log("Bounding boxes:", data);
+      setBoundingBoxes(data);
+    })
+    .catch((err) => console.error("Failed to fetch bounding boxes:", err));
+  }, []);
 
   const selectedProperty = useMemo(
     () => PROPERTIES.find((p) => p.id === selectedPropertyId) ?? PROPERTIES[0],
@@ -176,20 +193,7 @@ function App() {
           <p className="app-subtitle">Vision–Language Model Powered</p>
         </div>
         <div className="app-header-right">
-          <button
-            className="header-button secondary"
-            type="button"
-            onClick={() => {
-              if (!selectedDisaster) {
-                setSelectedDisaster("Disaster not yet selected");
-              }
-            }}
-          >
-            Select Disaster
-          </button>
-          <button className="header-button primary" type="button">
-            Upload Imagery
-          </button>
+          <span className="header-disaster-pill">Santa Rosa Wildfire Disaster</span>
         </div>
       </header>
 
@@ -238,7 +242,6 @@ function App() {
             </div>
             <div className="imagery-details">
             <div className="imagery-pill">
-          {selectedDisaster ?? "No disaster selected"}
         </div>
         <div className="imagery-meta">
           <div className="imagery-meta-title">Selected property</div>
@@ -289,7 +292,32 @@ function App() {
               </li>
             </ul>
           </section>
+          <section className="panel summary-panel">
+            <div className="panel-header">
+              <h2>Summary</h2>
+            </div>
+            <div className="summary-grid">
+              <div className="summary-card severe">
+                <div className="summary-num">—</div>
+                <div className="summary-label">Severe</div>
+              </div>
+              <div className="summary-card minor">
+                <div className="summary-num">—</div>
+                <div className="summary-label">Minor</div>
+              </div>
+              <div className="summary-card none">
+                <div className="summary-num">—</div>
+                <div className="summary-label">No Damage</div>
+              </div>
+              <div className="summary-card total">
+                <div className="summary-num">{boundingBoxes.length || "—"}</div>
+                <div className="summary-label">Total</div>
+              </div>
+            </div>
+          </section>
         </section>
+
+        
 
         <section className="right-column">
           <section className="panel map-panel">
@@ -339,6 +367,50 @@ function App() {
                     userSelect: "none",
                   }}
                 />
+                <svg
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    transform: `scale(${mapZoom}) translate(${pan.x / mapZoom}px, ${pan.y / mapZoom}px)`,
+                    transformOrigin: "center center",
+                    transition: isDragging ? "none" : "transform 0.2s ease",
+                    overflow: "visible",
+                    pointerEvents: "none",
+                  }}
+                  viewBox="0 0 1024 1024"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  {boundingBoxes
+                    .filter((box) => {
+                      if (box.subtype === "no-damage") return damageFilter.noDamage;
+                      if (box.subtype === "minor-damage") return damageFilter.minorDamage;
+                      return damageFilter.severeDamage;
+                    })
+                    .map(({ building_id, subtype, bbox }) => {
+                      const [minX, minY, maxX, maxY] = bbox;
+                      const color =
+                        subtype === "no-damage" ? "#22c55e" :
+                        subtype === "minor-damage" ? "#f59e0b" :
+                        "#ef4444";
+
+                      return (
+                        <rect
+                          key={building_id}
+                          x={minX}
+                          y={minY}
+                          width={maxX - minX}
+                          height={maxY - minY}
+                          fill="none"
+                          stroke="black"
+                          strokeWidth={2}
+                          strokeDasharray="4 2"
+                        />
+                      );
+                    })}
+                </svg>
                 <div style={{ position: "relative", zIndex: 1 }}>
                   <div className="map-houses-row">
                     {row0.map((property) => renderHouse(property))}
@@ -379,67 +451,70 @@ function App() {
               </div>
             </div>
           </section>
+          <section className="chat-container">
+            <div className="chat-header">
+              <span className="chat-title">AI Assistant</span>
+            </div>
+            <div className="chat-messages">
+              {chatMessages.map((message) => (
+                <div
+                  key={message.id}
+                  className={`message-wrapper ${message.sender === "user" ? "user-wrapper" : "assistant-wrapper"}`}
+                >
+                  {/* Only show the AI icon for assistant messages */}
+                  {message.sender === "assistant" && (
+                    <div className="assistant-icon" title="AI Assistant">AI</div>
+                  )}
+                  
+                  <div className={`chat-bubble ${message.sender}`}>
+                    {message.text}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="chat-input-area">
+              {/* Refined Quick Actions to help with Capstone testing */}
+              <div className="quick-actions">
+                <button type="button" onClick={() => setChatInput("Analyze severe damage areas")}>
+                  Analyze Severe Damage
+                </button>
+                <button type="button" onClick={() => setChatInput("Show overall building damage")}>
+                  Show Overall Building Damage
+                </button>
+                <button type="button" onClick={() => setChatInput("Number of buildings affected")}>
+                  Show Number of Buildings Affected
+                </button>
+              </div>
+
+              <div className="chat-input-row">
+                <input
+                  className="chat-input"
+                  type="text"
+                  value={chatInput}
+                  onChange={(event) => setChatInput(event.target.value)}
+                  placeholder="Ask about damage patterns..."
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter") {
+                      event.preventDefault();
+                      handleSendChat();
+                    }
+                  }}
+                />
+                <button
+                  className="chat-send-button"
+                  type="button"
+                  onClick={handleSendChat}
+                >
+                  Send
+                </button>
+              </div>
+            </div>
+          </section>
         </section>
       </main>
 
-      
-<section className="chat-container">
-  <div className="chat-messages">
-    {chatMessages.map((message) => (
-      <div
-        key={message.id}
-        className={`message-wrapper ${message.sender === "user" ? "user-wrapper" : "assistant-wrapper"}`}
-      >
-        {/* Only show the AI icon for assistant messages */}
-        {message.sender === "assistant" && (
-          <div className="assistant-icon" title="AI Assistant">AI</div>
-        )}
-        
-        <div className={`chat-bubble ${message.sender}`}>
-          {message.text}
-        </div>
-      </div>
-    ))}
-  </div>
-
-  <div className="chat-input-area">
-    {/* Refined Quick Actions to help with Capstone testing */}
-    <div className="quick-actions">
-      <button type="button" onClick={() => setChatInput("Analyze severe damage areas")}>
-        Analyze Severe Damage
-      </button>
-      <button type="button" onClick={() => setChatInput("Show overall building damage")}>
-        Show Overall Building Damage
-      </button>
-      <button type="button" onClick={() => setChatInput("Number of buildings affected")}>
-        Show Number of Buildings Affected
-      </button>
-    </div>
-
-    <div className="chat-input-row">
-      <input
-        className="chat-input"
-        type="text"
-        value={chatInput}
-        onChange={(event) => setChatInput(event.target.value)}
-        placeholder="Ask about damage patterns..."
-        onKeyDown={(event) => {
-          if (event.key === "Enter") {
-            event.preventDefault();
-            handleSendChat();
-          }
-        }}
-      />
-      <button
-        className="chat-send-button"
-        type="button"
-        onClick={handleSendChat}
-      >
-        Send
-      </button>
-    </div>
-  </div>
-</section>
+    
     </div>
   );
 }

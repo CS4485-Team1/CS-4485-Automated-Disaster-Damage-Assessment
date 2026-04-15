@@ -94,6 +94,7 @@ def get_pairs(image_directory: str, output_crop_directory: str):
                     "subtype": subtype,
                     "pre_crop": str(pre_crop_path),
                     "post_crop": str(post_crop_path),
+                    "bbox": list(bounding),
                 })
     return valid_building_pairs
 

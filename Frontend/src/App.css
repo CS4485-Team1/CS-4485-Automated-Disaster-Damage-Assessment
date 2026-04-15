@@ -288,7 +288,7 @@
 
 .map-placeholder {
   width: 100%;
-  height: 500px;
+  height: 380px;
   overflow: hidden;
   position: relative;
   display: block;
@@ -553,4 +553,61 @@
   .chat-send-button {
     width: 100%;
   }
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.summary-card {
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.summary-num {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.summary-label {
+  font-size: 11px;
+}
+
+.summary-card.severe  { background: #fcebeb; color: #a32d2d; }
+.summary-card.minor   { background: #faeeda; color: #854f0b; }
+.summary-card.none    { background: #eaf3de; color: #3b6d11; }
+.summary-card.total   { background: #f0f0f0; color: #333; }
+
+.header-disaster-title {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.header-disaster-pill {
+  background: rgba(255, 255, 255, 0.12);
+  border: 0.5px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 8px 20px;  
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.chat-header {
+  display: inline-block;        
+  padding: 6px 18px;
+  background: #1e3a5f;          
+  border-radius: 20px;         
+  margin-bottom: 12px;          
+}
+
+.chat-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
 }
