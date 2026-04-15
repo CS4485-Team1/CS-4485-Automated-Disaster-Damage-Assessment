@@ -388,7 +388,7 @@ function App() {
                       if (box.subtype === "minor-damage") return damageFilter.minorDamage;
                       return damageFilter.severeDamage;
                     })
-                    .map(({ building_id, subtype, bbox }) => {
+                    .map(({ building_id, bbox }) => {
                       const [minX, minY, maxX, maxY] = bbox;
 
                       return (
