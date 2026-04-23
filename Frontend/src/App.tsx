@@ -1,6 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
 import "./App.css";
-import summaryData from "../../Backend/data/santa_rosa/building_summary.json"
+import Map from "./Map";
 
 type DamageLevel = "noDamage" | "minorDamage" | "severeDamage";
 
@@ -298,28 +298,20 @@ function App() {
             </div>
             <div className="summary-grid">
               <div className="summary-card severe">
-                <div className="summary-num">
-                  {(summaryData.prediction_counts["destroyed"] + summaryData.prediction_counts["major-damage"]).toLocaleString()}
-                </div>
+                <div className="summary-num">—</div>
                 <div className="summary-label">Severe</div>
               </div>
               <div className="summary-card minor">
-                <div className="summary-num">
-                  {summaryData.prediction_counts["minor-damage"].toLocaleString()}
-                </div>
+                <div className="summary-num">—</div>
                 <div className="summary-label">Minor</div>
               </div>
               <div className="summary-card none">
-                <div className="summary-num">
-                  {summaryData.prediction_counts["no-damage"].toLocaleString()}
-                </div>
+                <div className="summary-num">—</div>
                 <div className="summary-label">No Damage</div>
               </div>
               <div className="summary-card total">
-                <div className="summary-num">
-                  {summaryData.total.toLocaleString()}
-                </div>
-                <div className="summary-label">Total Buildings</div>
+                <div className="summary-num">{boundingBoxes.length || "—"}</div>
+                <div className="summary-label">Total</div>
               </div>
             </div>
           </section>
@@ -333,6 +325,7 @@ function App() {
               <h2>Property Damage Map</h2>
             </div>
             <div className="map-container">
+              <Map type = 'pre'/>
               <div className="map-toolbar">
                 <button className="map-button" type="button" onClick={() => setMapZoom(z => Math.min(z + 0.2, 3))}>
                   +
@@ -355,26 +348,6 @@ function App() {
                 onMouseUp={() => setIsDragging(false)}
                 onMouseLeave={() => setIsDragging(false)}
               >
-                <img
-                  src={activeImageTab === "before"
-                    ? "/santa-rosa-wildfire_00000000_pre_disaster.png"
-                    : "/santa-rosa-wildfire_00000000_post_disaster.png"}
-                  alt="Satellite view"
-                  draggable={false}
-                  style={{
-                    position: "absolute",
-                    top: 0,
-                    left: 0,
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "contain",
-                    transform: `scale(${mapZoom}) translate(${pan.x / mapZoom}px, ${pan.y / mapZoom}px)`,
-                    transformOrigin: "center center",
-                    transition: isDragging ? "none" : "transform 0.2s ease",
-                    display: "block",
-                    userSelect: "none",
-                  }}
-                />
                 <svg
                   style={{
                     position: "absolute",
