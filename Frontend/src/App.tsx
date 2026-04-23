@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from "react";
 import "./App.css";
+import summaryData from "../../Backend/data/santa_rosa/building_summary.json"
 
 type DamageLevel = "noDamage" | "minorDamage" | "severeDamage";
 
@@ -297,20 +298,28 @@ function App() {
             </div>
             <div className="summary-grid">
               <div className="summary-card severe">
-                <div className="summary-num">—</div>
+                <div className="summary-num">
+                  {(summaryData.prediction_counts["destroyed"] + summaryData.prediction_counts["major-damage"]).toLocaleString()}
+                </div>
                 <div className="summary-label">Severe</div>
               </div>
               <div className="summary-card minor">
-                <div className="summary-num">—</div>
+                <div className="summary-num">
+                  {summaryData.prediction_counts["minor-damage"].toLocaleString()}
+                </div>
                 <div className="summary-label">Minor</div>
               </div>
               <div className="summary-card none">
-                <div className="summary-num">—</div>
+                <div className="summary-num">
+                  {summaryData.prediction_counts["no-damage"].toLocaleString()}
+                </div>
                 <div className="summary-label">No Damage</div>
               </div>
               <div className="summary-card total">
-                <div className="summary-num">{boundingBoxes.length || "—"}</div>
-                <div className="summary-label">Total</div>
+                <div className="summary-num">
+                  {summaryData.total.toLocaleString()}
+                </div>
+                <div className="summary-label">Total Buildings</div>
               </div>
             </div>
           </section>
